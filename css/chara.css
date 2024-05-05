@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+  }
+
+  table{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  tr{
+    justify-content: space-between;
+    /*display: flex;*//*ON:サイズ変更なし：大きさ固定 OFF:サイズ変更あり、一列固定*/
+    flex-wrap: wrap;
+
+  }
+  .chara_icon{
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 6px auto 0;
+
+    
+}
+
+.chara_icon img{
+  /*参考URL:https://photoshopvip.net/144266#tip12*/
+  aspect-ratio: 3/2;/*サイズ揃える*/
+  object-fit:contain;
+}
+.chara{
+    width: 60%;
+    margin: 0 auto;
+    
+  
+}
+.chara img{
+
+    display: block; margin: auto;
+
+}
+
+.current{
+  transform: scale(1.3);
+ /* padding: 0 10% 0 10%;
+ */
+  top:-0.2em;
+
+}
+/*
+.chara_icon{
+    float: none;
+    background: none;
+    border: none;
+    width: calc(100% / 7);
+    margin: 0;
+}
+*/

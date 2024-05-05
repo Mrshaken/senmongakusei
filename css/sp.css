@@ -1,0 +1,107 @@
+@media screen and (max-width: 767px) {
+    .mainContentsIn {
+        padding-top: calc(14.9334vw + 11px + 32px + 6.4%);
+        padding-right: 3.3334%;
+        padding-left: 3.3334%;
+        padding-bottom: 64px;
+    }
+}
+.mainContentsIn {
+    width: 100%;
+    padding: 126px 6.3918% 84px 14.9485%;
+}
+
+@media screen and (max-width: 767px) {
+    .mainCont__characircle {
+        width: 26.6667vw;
+        height: 29.3334vw;
+        max-width: 200px;
+        max-height: 220px;
+        top: 0;
+        margin-top: 7.4667%;
+        left: unset;
+        right: 11.7334%;
+    }
+}
+.mainCont__characircle {
+    width: 160px;
+    height: 172px;
+    position: absolute;
+    top: -4px;
+    left: 14.9485%;
+    right: 7.6289%;
+    margin: 0 auto;
+    /* z-index: 1; */
+    pointer-events: auto;
+    cursor: grab;
+}
+
+@media screen and (max-width: 767px) {
+    .specialWrap {
+        max-width: 100%;
+    }
+}
+.specialWrap {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    letter-spacing: -0.03em;
+    position: relative;
+    z-index: 2;
+}
+
+@media screen and (max-width: 767px) {
+    .specialLists {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.specialLists {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+    .specialList {
+        width: 49%;
+        margin-bottom: 4.569%;
+    }
+}
+.specialList {
+    width: 48.4928%;
+    margin-bottom: 4.569%;
+}
+li {
+    list-style: none;
+}
+
+@media screen and (max-width: 767px) {
+    .specialList__link {
+        padding: 4.5715% 4.5715%;
+        border-radius: 10px;
+        border-width: 2px;
+        font-size: 1.4rem;
+    }
+}
+.specialList__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 4.194%;
+    border: 4px solid #ee858c;
+    background-color: #fff899;
+    border-radius: 20px;
+    z-index: 2;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.6112;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    color: #926453;
+    transition: .3s ease;
+}

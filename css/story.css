@@ -1,0 +1,571 @@
+@charset "utf-8";
+
+
+body {
+  color: #333;
+  font-family: YakuHanJPs, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: YakuHanMPs, "Noto Serif JP", "ヒラギノ明朝 ProN W3", "游明朝 Medium", "Yu Mincho Medium", "游明朝", "Yu Mincho", YuMincho, serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+
+
+/*画像の横幅を100%にしてレスポンシブ化*/
+.slick-img img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /*画像の下にできる余白を削除*/
+  border-radius: 20px;
+  /*共通値[BR]*/
+}
+
+/*メイン画像下に余白をつける*/
+
+.gallery {
+  margin: 0 0 5px 0;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #ccc;
+  /*矢印の色*/
+  border-right: 2px solid #ccc;
+  /*矢印の色*/
+  height: 25px;
+  width: 25px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: 2.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: 2.5%;
+  transform: rotate(45deg);
+}
+
+/*選択するサムネイル画像の設定*/
+
+
+.choice-btn li {
+  cursor: pointer;
+  outline: none;
+  /* background:#333;*/
+  /*margin: 0 3px 6px;/*スライド3枚の場合の均等加減*/
+  padding: 0 3px 6px;
+
+  /*背景色をコンテンツ部分のみにかける*/
+  background: #333;
+  background-clip: content-box;
+  /*コンテンツボックスを配置の基準とする（パディング、ボーダー、マージンを含まない。）*/
+
+  border-radius: 20px;
+  /*共通値[BR]*/
+
+}
+
+.choice-btn li img {
+  opacity: 0.4;
+  /*選択されていないものは透過40%*/
+
+}
+
+.choice-btn li.slick-current img {
+  opacity: 1;
+  /*選択されているものは透過しない*/
+
+}
+
+.choice-btn .slick-track {
+  transform: unset !important;
+  /*画面幅サイズ変更に伴うサムネイル固定*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+/*エリア全体を中央寄せ*/
+.wrapper {
+  width: 94%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #333;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+
+
+
+/* ========================
+   STORY
+======================== */
+.daily_year {
+  color: #6d578a;
+  /* text-align: center; */
+  text-shadow: 2px 2px rgba(0, 0, 0, .15);
+  font-family: 'GenJyuuGothicXP';
+  font-size: calc(2.5rem * 2);
+  font-weight: 600;
+  line-height: 5rem;
+  /* margin-bottom: 3em; */
+  /* background: none; */
+  /* border: none; */
+  /* text-align: left; */
+  /* padding: 0; */
+  /* line-height: 1; */
+  letter-spacing: 0.1em;
+  /* margin: 0 0 0.5em; */
+  /* padding: 1em 0.2em; */
+  width: 7em;
+  position: relative;
+  /* background-color: #9eb894; */
+  background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 16px, transparent 0, transparent 28px);
+  /* margin-bottom: 24px; */
+  /* margin-right: 3px; */
+  margin-left: 20px;
+  top: calc(50px* 0.75);
+  left: 20px;
+}
+
+/*追加ADD*/
+/*.daily_year{
+/*  color: #6d578a;
+  /*text-align: center;*/
+/*  text-shadow: 2px 2px rgba(0, 0, 0, .15);
+  font-family: 'GenJyuuGothicXP';
+  font-size: calc(2.5rem * 2);
+  font-weight: 600;
+  line-height: 5rem;
+  margin-bottom: 3em;
+
+  background:none;
+  border:none;
+  text-align:left;
+  padding:0;
+  line-height: 1;
+  letter-spacing:0.1em;
+  margin:0 0 0.5em;
+  padding:1em 0.2em;
+
+  width:7em;
+  position: relative;
+ /* background-color: #9eb894;*/
+/*background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 16px, transparent 0, transparent 28px);*/
+/* border: 4px solid #eb6100;
+  border-radius: 60px;*/
+/*  margin-bottom: 24px;
+  margin-right: 3px;
+  margin-left:20px;
+
+  top:calc(50px*1.75 + 25px);
+*/
+/*}*/
+
+/*固有設定*/
+.bg_2023 {
+  background: #927d83;
+  padding: 1em 1em 0em 3em;
+  border-radius: 20px;
+}
+
+.bg_2024 {
+  background: #927d83;
+  padding: 1em 1em 0em 3em;
+  border-radius: 20px;
+}
+
+
+.bg_2025 {
+  background: #927d83;
+  padding: 1em 1em 0em 3em;
+  border-radius: 20px;
+}
+
+
+/*=============================================================================*/
+/*TITLE:c_list_block*/
+/*ABOUT:共通リスト。（エピソードリスト）*/
+/*ABOUT:下部に個別設定あり*/
+/*=============================================================================*/
+
+@media screen and (max-width:600px) {
+  #c_list_block_0002 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  #c_list_block_0002 a {
+    width: 5em;
+    height: 2em;
+  }
+
+}
+
+#c_list_block_0002 {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  font-family: "GenJyuuGothicXP";
+  font-weight: 700;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(2px 2px rgba(148, 148, 148, 0.15));
+  padding: 2.5em 0;
+}
+
+#c_list_block_0002 table,
+#c_list_block_0002 tr,
+#c_list_block_0002 th,
+#c_list_block_0002 td {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/*サイズに合わせて折り返し*/
+#c_list_block_0002 tbody {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#c_list_block_0002 tr {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#c_list_block_0002 a {
+  display: block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  color: #ff4040;
+  background: #574d4d;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 0.2em 0 0;
+  font-weight: 1000;
+  font-size: 90%;
+  /*letter-spacing: -0.1em;*/
+}
+
+/*現在選択しているエピソード*/
+#c_list_block_0002 .current a {
+  background: #ffd900;
+}
+
+/*年ごとに個別設定*/
+.list_block_2023 #c_list_block_0001 a {
+  color: #ff4040;
+  background: #574d4d;
+}
+
+.list_block_2024 #c_list_block_0001 a {
+  color: #ff4040;
+  background: #574d4d;
+}
+
+.list_block_2025 #c_list_block_0001 a {
+  color: #ffffff;
+  background: #185235;
+}
+
+
+
+/*=============================================================================*/
+/*TITLE:c_list_block*/
+/*ABOUT:共通リスト。（エピソードリスト）*/
+/*ABOUT:下部に個別設定あり*/
+/*=============================================================================*/
+
+
+#c_list_block_0001 {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto 60px;
+  font-family: "GenJyuuGothicXP";
+  font-weight: 700;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(2px 2px rgba(0, 0, 0, .15));
+}
+
+#c_list_block_0001 table,
+#c_list_block_0001 tr,
+#c_list_block_0001 th,
+#c_list_block_0001 td {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#c_list_block_0001 tbody {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#c_list_block_0001 tr {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#c_list_block_0001 a {
+  display: block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  color: #e26081;
+  background: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 0.1em 0 0;
+}
+
+#c_list_block_0001 .crt a {
+  background: #ffd900;
+}
+
+#js-screen {
+  position: relative;
+  padding-top: calc(100% * 9 / 16);
+}
+
+#js-screen img {
+  width: 100%;
+  top: 0;
+}
+
+
+
+/*=============================================================================*/
+/*TITLE:articleHead*/
+/*ABOUT:ストーリ文字のデザイン*/
+/*ABOUT:下部に個別設定あり*/
+/*=============================================================================*/
+
+h2 {
+  font-family: 'Bruno Ace SC', sans-serif;
+  border: none;
+  color: #915656;
+  font-size: 4rem;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  margin: 1.0em 0em 0.1em;
+  margin-left: 1em;
+}
+
+h2.articleHead {
+  font-family: 'Bruno Ace SC', sans-serif;
+  border: none;
+  color: #915656;
+  font-size: 10rem;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  margin: 0.8em 0em 0.3em 0.5em;
+  margin-left: calc(1em + 0.2em);
+  /*位置調整*/
+  top: -1em;
+  left: 0.2em;
+  position: relative;
+}
+
+
+/*参考URL:https://shiroi-ponzu.com/webparts/waai-slash/*/
+div.slash {
+  content: '';
+  font-family: 'Bruno Ace SC', sans-serif;
+  /* display: inline-block; */
+  position: absolute;
+  padding: 0 40px;
+  top: 1.5em;
+  left: 1.9em;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  background-color: #915656;
+  width: 60px;
+  height: 3px;
+
+}
+
+
+h2 .day_head {
+  font-family: 'Bruno Ace SC', sans-serif;
+  border: none;
+  color: #915656;
+  font-size: 6rem;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  margin: 0.8em 0em 0.3em 0.5em;
+
+  /*位置調整*/
+  top: -0.6em;
+  left: -0.4em;
+  position: relative;
+}
+
+.gallery-text h3 {
+  font-family: 'Bruno Ace SC', sans-serif;
+  border: none;
+  color: #915656;
+  font-size: 3rem;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  margin: 0.0em 0em 0.3em 10%;
+}
+
+.gallery-text .honbun {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  font-size: 1.3em;
+  border: none;
+  color: #915656;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  margin: 1em 10% 0.3em 15%;
+}
+
+
+
+/*button*/
+
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+
+  text-align: center;
+  width: 200px;
+  margin: 3em auto;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+
+
+/**/
+
+h2.articleHead i {
+  font-family: "04B_19";
+  margin-right: 0.3em;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  /* font-weight: 900; */
+}
+
+h2.articleHead b {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.5em;
+  line-height: 1.2;
+}
+
+h2.articleHead b::after {
+  content: "";
+  width: 100%;
+  height: 0.5em;
+  background: url(../../images/main/cont/story/line.png)bottom center / auto 100% repeat-x;
+}
+
+h3.articleHead {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  line-height: 1;
+  font-family: "04B_19";
+  color: #7e5252;
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.5em;
+}
