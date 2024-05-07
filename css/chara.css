@@ -2,10 +2,22 @@
     box-sizing: border-box;
   }
 
+  h1{
+    margin: 100px auto 50px;
+    text-align: center;
+    letter-spacing: 0.5em;;
+    font-size: 36px;
+    
+      font-family: "Poetsen One", sans-serif;
+      font-weight: 400;
+      font-style: normal
+    
+  }
+
   table{
     width: 60%;
-    margin: 0 auto;
-  }
+    margin: 40px auto 30px;
+  } 
 
   tr{
     justify-content: space-between;
