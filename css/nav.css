@@ -138,9 +138,9 @@
     position: relative;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    border: 4px solid #ee858c;
+    border: 4px solid #D94343;
     border-left-width: 0px;
-    color: #ee858c;
+    color: #D94343;
     padding: 12px 0 12px 20px;
     font-size: 18px;
     line-height: 1;
@@ -160,7 +160,7 @@
     bottom: -3px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    box-shadow: 3px 3px #ee858c;
+    box-shadow: 3px 3px #D94343;
 }
 .navLink:after{
     content: '';
@@ -169,7 +169,7 @@
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: #ffd9dc;
+    background-color: #D94343;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     transition: .3s ease;
@@ -194,11 +194,11 @@
 
 /** NAV偶数 **/
 .headerNavLists__item:nth-of-type(even) .navLink{
-    border-color: #45bbff;
-    color: #45bbff;
+    border-color: #568C6D;
+    color: #568C6D;
 }
 .headerNavLists__item:nth-of-type(even) .navLink:before{
-    box-shadow: 2px 2px #45bbff;
+    box-shadow: 2px 2px #568C6D;
 }
 .headerNavLists__item:nth-of-type(even)::before{
     background: url(../img/common/nav_mark_b.svg) no-repeat center right / contain;
@@ -246,7 +246,7 @@
         left: -0.5334vw;
         right: -0.4vw;
         bottom: -0.4vw;
-        box-shadow: 0.4vw 0.4vw #ee858c;
+        box-shadow: 0.4vw 0.4vw #D94343;
     }
     .navTxt span{
         font-size: 3.2vw;
