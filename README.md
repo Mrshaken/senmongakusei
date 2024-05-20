@@ -1,2 +1,5 @@
 # senmongakusei
-専門学生のティザーサイト
+専門学生のコンセプトサイト
+
+本家はこちら
+https://senmongakkou.blog/
