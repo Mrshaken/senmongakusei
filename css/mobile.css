@@ -156,6 +156,23 @@ body {
   word-wrap: break-word;
 }
 
+.wrapper{
+  background-image:url("../img/common/bg.png");;
+  background-size: 25%;
+
+  background-repeat: repeat;
+  z-index: -99999;
+
+  /*透明度をあげる*/
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+}
+
+#main{
+  position: relative;
+ margin:0 auto;
+
+}
 /*=============================================================================*/
 /*TITLE:Logo*/
 /*ABOUT:ヘッダーのタイトルロゴ*/
@@ -249,7 +266,7 @@ a:active {
 @media screen and (max-width: 767px) {
   .sp_twitterWidget {
     width: 85.3334%;
-    margin: 7.3334% auto 0;
+    margin: 7.3334% auto 7%;
     /* padding: ;*/
     border-radius: 20px;
     border: 2px solid #ee858c;
@@ -726,7 +743,7 @@ color:red;
 .frame {
   width: 768px;
   height: 1378px;
-  background-color: #ffadad;
+  
 }
 
 .frame .overlap-group {
