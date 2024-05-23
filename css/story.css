@@ -126,6 +126,12 @@ body {
   /*画面幅サイズ変更に伴うサムネイル固定*/
 }
 
+/*スライダー用のCSS個別追加要素*/
+.gallery img{
+  width:60%;
+  margin: 0 auto;
+}
+
 /*========= レイアウトのためのCSS ===============*/
 
 /*エリア全体を中央寄せ*/
@@ -174,9 +180,9 @@ p {
   /* text-align: center; */
   text-shadow: 2px 2px rgb(217, 67, 67 .15);
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: calc(2.0rem * 2);
+  font-size: calc(2.0rem * 1.5);
   font-weight: 500;
-  line-height: 5rem;
+  line-height: 3rem;
    padding:5px 0 5px 20px;
   /* background: none; */
   /* border: none; */
@@ -189,11 +195,11 @@ p {
   width: 7em;
   border-radius: 13px;
   position: relative;
-   background-color: #fcf9d1; 
+  /* background-color: #f9f6c4; 
   /*background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 16px, transparent 0, transparent 28px);*/
-  border:3px solid  #D94343;
+ /* border:1px solid  #D94343;*/
   margin-left: 15px;
-  top: calc(50px* 0.75);
+  top: calc(50px* 1);
   left: 20px;
 }
 
@@ -234,17 +240,17 @@ p {
 /*固有設定*/
 .bg_2023 {
   background: #fff899;
-  padding: 50px 20px 0px 50px;
+  padding: 50px 20px 0px 40px;
   border-radius: 20px;
-  border: 4px solid #D94343;
-  margin-bottom: 50px;
+  border: 2px solid #D94343;
+
 }
 
 .bg_2024 {
   background: #fff899;
   padding: 50px 20px 0px 50px;
   border-radius: 20px;
-  border: 4px solid #D94343;
+  border: 2px solid #D94343;
   margin-bottom: 50px;
 }
 
@@ -294,11 +300,11 @@ p {
   margin: 0 auto 20px;
   font-family: "GenJyuuGothicXP";
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: relative;
   z-index: 1;
   filter: drop-shadow(2px 2px rgba(77, 44, 5, 0.222));
-  padding: 2.5em 0;
+  padding: 0.5em 0;
 }
 
 #c_list_block_0002 table,
@@ -324,8 +330,8 @@ p {
 
 #c_list_block_0002 a {
   display: block;
-  width: 80px;
-  height: 40px;
+  width: 50px;
+  height: 30px;
   text-align: center;
   color: #ff4040;
   background: #ffffff;
@@ -336,6 +342,34 @@ p {
   font-size: 90%;
   /*letter-spacing: -0.1em;*/
 }
+
+#c_list_block_0002 a:hover {
+  display: block;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  color: #ffffff;
+  background: #ffbfbf;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 0.2em 0 0;
+  font-weight: 1000;
+  font-size: 90%;
+  /*letter-spacing: -0.1em;*/
+
+  background: #ffa8a8;
+	box-shadow: 0 3px 0 #ffa8a8, 0 6px 0 rgba(71, 57, 57, 0.2);
+	transform: translateY(3px);
+  transition-duration: .3s;
+}
+
+#c_list_block_0002 a:active {
+  background: #ea5f5f;
+
+  transition-duration: .1s;
+
+}
+
 
 /*現在選択しているエピソード*/
 #c_list_block_0002 .current a {
@@ -502,16 +536,32 @@ h2 .day_head {
   font-weight: 800;
   border: none;
   color: #915656;
-  font-size: 3rem;
+  
+
+  /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
+  font-size: clamp(1.5rem, calc(1.25vw + 1.25rem), 3rem);
+  /*font-size: 3rem;*/
   line-height: 1;
   display: flex;
   align-items: flex-start;
-  margin: 0 0 50px 80px;
+  margin: 0 0 20px 50px;
+}
+
+.gallery-text .gallery-text-honbun{
+  margin: 0 0 10px 10px;
+}
+
+.gallery-text .gallery-text-honbun img{
+ 
+  margin:0 auto;
+  margin-bottom: 20px;
 }
 
 .gallery-text .honbun {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 2.0em;
+    /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
+    font-size: clamp(1.0rem, calc(1.25vw + 0.75rem), 2.0rem);
+  /*font-size: 2.0em;*/
   border: none;
   color: #915656;
   line-height: 1.5;
@@ -570,7 +620,7 @@ a.btn--color {
 
 a.btn--color:hover {
   margin-top: 3px;
-  color: #000;
+  color: #ffffff;
   background: #915656;
   border-bottom: 2px solid #da9595;
 }
