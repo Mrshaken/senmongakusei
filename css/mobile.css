@@ -556,7 +556,7 @@ img {
   display: flex;
   flex-direction: column;
 
-  padding: 70px 60px 60px;
+  padding: 40px;
   margin-top: -72%;
   /*★★連動箇所*/
 
@@ -650,22 +650,29 @@ img {
 }
 
 .chara_head_name {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom:40px;
+
   /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-  font-size: clamp(2.8rem, calc(1.25vw + 1.5rem), 5.2rem);
+  font-size: clamp(1.8rem, calc(1.25vw + 2.3rem), 3.2rem);
   line-height: 1.4091;
   font-weight: 800;
-  margin-bottom: 24px;
   color: #965d5d;
 }
 
 .chara_head_name_kana {
-  font-family: "Poetsen One", sans-serif;
-  font-weight: 100;
-  font-style: italic;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;/*200-800*/
+  letter-spacing: 0.1em;
+  font-stretch: semi-condensed;
+  font-style: normal;
   color: pink;
 
-  font-size: 24px;
-  top: -20px;
+  font-size: clamp(24px, calc(1.25vw + 18px), 36px);
+  top: -10px;
   left: 30px;
   position: relative;
 }

@@ -51,12 +51,14 @@
 
 }
 
-.current{
+.chara_list .current{
   transform: scale(1.3);
  /* padding: 0 10% 0 10%;
  */
   top:-0.2em;
-
+}
+.chara_list .current a {
+  pointer-events: none; /* 押してもリンクさせない */
 }
 /*
 .chara_icon{
