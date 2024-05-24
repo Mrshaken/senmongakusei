@@ -6,11 +6,31 @@
     height: 100vh;
   }
 
+  .chara_syoukai_wrap{
+    height: 60vh;
+  }
+  .chara_syokai_contain{
+    height: 60vh;
+  }
+
+  .chara_item_wrap{
+    height: 60vh;
+  }
+  .chara_list_wrap{
+    height:20vh;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+    }
   h1{
-    margin: 70px auto 50px;
+    height: 20vh;
+    margin: 10px auto 10px;
     text-align: center;
     letter-spacing: 0.5em;;
-    font-size: 36px;
+    /*VWが有効な場合、VW、無効な場合px)*/
+    font-size: 36px;  /**/
+    font-size: 4.0vw; /*有効な場合上書きされる*/
     
       font-family: "Poetsen One", sans-serif;
       font-weight: 400;
@@ -20,7 +40,7 @@
 
   table{
     width: 60%;
-    margin: 40px auto 30px;
+    margin: 0px auto 30px;
   } 
 
   tr{

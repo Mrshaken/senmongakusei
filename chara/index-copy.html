@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-
+<!--ビューポート高さ100％（画面いっぱい）に合わせた場合のキャラ紹介ページ-->
+<!--ビューポート高さ100％（画面いっぱい）に合わせた場合のキャラ紹介ページ-->
 <head>
     <meta charset="utf-8">
     <title>5-1-14 クリックしたらナビが右から左に出現</title>
@@ -11,8 +12,8 @@
     <link rel="stylesheet" type="text/css"
         href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="../css/chara.css">
+    <link rel="stylesheet" type="text/css" href="../css/mobile-copy.css">
+    <link rel="stylesheet" type="text/css" href="../css/chara-copy.css">
 
 
     <!--google fonts-->
@@ -22,18 +23,18 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="main chara_wrapper">
         <div>
             <h1>CHARACTER</h1>
-            <div class="chara_syoukai">
+            <div class="chara_syoukai  chara_syoukai_wrap">
                 <div class="chara_syokai_contain">
-                    <div class="chara_item c_nanase">
+                    <div class="chara_item c_nanase chara_item_wrap">
                         <div class="picture c_nanase"> <img src="../img/character/nanase.png"></div>
-                        <div class="text">
+                   <!--     <div class="text">
                             <h3 class="chara_head">
                                 <span class="chara_head_name c_nanase">七瀬 琴美</span><br>
                                 <span class="chara_head_name_kana c_nanase">NANASE KOTOMI</span><br>
-                              <!--  <span class="chara_head_lines">決めゼリフ的ななにか</span><br>-->
+                           
                             </h3>
                             <p>
                             都会育ちで面倒見の良いお姉さん。<br>
@@ -41,12 +42,13 @@
                             将来は自分のデザインした商品をお店に並べたいと思っている。<br>
                         </p>
                         </div>
+                    -->
                     </div>
                 </div>
             </div>
         </div>
             <!--キャラクター一覧リスト（共通）-->
-    <table class="chara_list">
+    <table class="chara_list chara_list_wrap">
         <tr>
             <td>
                 <div class="chara_icon current"><img src="../img/character/chara_common.png"></div>

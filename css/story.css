@@ -179,7 +179,8 @@ p {
   color: rgb(217, 67, 67);
   /* text-align: center; */
   text-shadow: 2px 2px rgb(217, 67, 67 .15);
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
   font-size: calc(2.0rem * 1.5);
   font-weight: 500;
   line-height: 3rem;
@@ -202,6 +203,7 @@ p {
   top: calc(50px* 1);
   left: 20px;
 }
+
 
 /*追加ADD*/
 /*.daily_year{
@@ -298,8 +300,9 @@ p {
   width: 1000px;
   max-width: 100%;
   margin: 0 auto 20px;
-  font-family: "GenJyuuGothicXP";
-  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-size: 1.5rem;
   position: relative;
   z-index: 1;
@@ -338,7 +341,6 @@ p {
   border-radius: 20px;
   text-decoration: none;
   padding: 0.2em 0 0;
-  font-weight: 1000;
   font-size: 90%;
   /*letter-spacing: -0.1em;*/
 }
