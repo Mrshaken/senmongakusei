@@ -156,23 +156,25 @@ body {
   word-wrap: break-word;
 }
 
-.wrapper{
-  background-image:url("../img/common/bg.png");;
+.wrapper {
+  background-image: url("../img/common/bg.png");
+  ;
   background-size: 25%;
 
   background-repeat: repeat;
   z-index: -99999;
 
   /*透明度をあげる*/
-  background-color:rgba(255,255,255,0.8);
-  background-blend-mode:lighten;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
 }
 
-#main{
+#main {
   position: relative;
- margin:0 auto;
+  margin: 0 auto;
 
 }
+
 /*=============================================================================*/
 /*TITLE:Logo*/
 /*ABOUT:ヘッダーのタイトルロゴ*/
@@ -210,7 +212,7 @@ body {
 @media screen and (max-width: 767px) {
 
   .hlogo {
-      /*ロゴ背景*/
+    /*ロゴ背景*/
     position: relative;
     z-index: 2;
     width: 64%;
@@ -508,6 +510,7 @@ img {
 
 .chara_item {
   max-width: 900px;
+  height: 1000px;
   width: 100%;
   margin: 50px auto;
   position: relative;
@@ -517,16 +520,15 @@ img {
   margin: 0 1.5em;
 }
 
-.picture {
-  width: 50%;
-  position: relative;
-}
 
 .chara_item .picture:after {
   content: "";
   position: absolute;
-  right: -30px;
-  bottom: -30px;
+  /*キャラクターの固有色影の位置*/
+  right: -15px;
+  bottom: 15px;
+  opacity: calc(0.8);
+  /*透明度*/
 
   display: block;
   -webkit-mask-repeat: no-repeat;
@@ -540,32 +542,40 @@ img {
 }
 
 
-.chara_item {
 
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+
+/*
+.chara_item .rotate10{
+  transform-origin: center;
+  rotate: -10deg;
+}
+*/
+.chara_item .transByImg {
+  width: 200%;
+  /*キャラクター幅だと、ノートの切れ端が途中で切れるので幅を拡大する*/
+  position: relative;
+  top: 40px;
+  transform: translateY(400px);
+
+
 }
 
-.text {
+@media screen and (max-width: 670px) {
+  .chara_item .transByImg {
+    transform: translateY(200px);
+  }
+}
 
-  margin: 0 auto;
-  line-height: 1.8;
-  font-size: 3.0vw;
-  z-index: -1;
-  display: flex;
-  flex-direction: column;
+@media screen and (max-width: 300px) {
 
-  padding: 40px;
-  margin-top: -72%;
-  /*★★連動箇所*/
-
-  background: #fdf7f6;
+  /*使うかわからないけど*/
+  .chara_item .transByImg {
+    transform: translateY(50px);
+  }
 }
 
 .picture {
-  width: 80%;
+  height: inherit;
   /*★★連動箇所*/
   bottom: 40px;
   flex-shrink: 0;
@@ -577,27 +587,6 @@ img {
 
 }
 
-/*キャラ文章フレーム（個別指定)*/
-.c_nanase .text {
-  color: #000000;
-
-  border: 10px solid #965d5d;
-  border-left-width: 0px;
-  border-top-width: 0px;
-  border-radius: 10vw;
-  border-bottom-right-radius: 10vw;
-}
-
-
-.c_momoe .text {
-  color: #000000;
-  background: #f8f4ef;
-  border: 10px solid #2f1d81;
-  border-left-width: 0px;
-  border-top-width: 0px;
-  border-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
 
 /*キャラクタービジュアル（個別指定)*/
 .chara_item .c_nanase:after {
@@ -641,23 +630,58 @@ img {
   */
 
 /*キャラクター本文（共通）*/
- 
+
+
+.text {
+  position: relative;
+  left: -25%;
+  ;
+  margin: 0 auto;
+
+  line-height: 1.8;
+ /* font-size: 18px;*/
+  z-index: 1;
+  display: inline-block;
+  flex-direction: column;
+
+  padding: 40px;
+  /*★★連動箇所*/
+
+  text-align: left;
+
+
+  background-image: url("../img/character/text_bg.png");
+  background-size: 100%;
+  filter: drop-shadow(10px 10px 0px rgb(155, 152, 124, 0.15));
+  filter: drop-shadow();
+
+  transform-origin: left top;
+  /*基準左上*/
+  rotate: -10deg;
+
+}
+
+
 .chara_head {
   /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-  font-size: clamp(1.8rem, calc(1.25vw + 1.5rem), 3.2rem);
+  /*font-size: 24px;/*clamp(1.8rem, calc(1.25vw + 1.5rem), 3.2rem);*/
   line-height: 1.4091;
   font-weight: 800;
   margin-bottom: 24px;
 }
 
+
+
+
 .chara_head_name {
   font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
   font-style: normal;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 
   /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-  font-size: clamp(1.8rem, calc(1.25vw + 2.3rem), 3.2rem);
+  font-size: clamp(28px, calc(1.25vw + 36px), 48px);
+
   line-height: 1.4091;
   font-weight: 800;
   color: #965d5d;
@@ -666,7 +690,8 @@ img {
 .chara_head_name_kana {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;/*200-800*/
+  font-weight: 300;
+  /*200-800*/
   letter-spacing: 0.1em;
   font-stretch: semi-condensed;
   font-style: normal;
@@ -679,19 +704,197 @@ img {
 }
 
 /*キャラクター本文（個別）*/
-.c_nanase{
-color: #965d5d;
+.c_nanase {
+  color: #965d5d;
 }
+
+.img_nanase {
+  width: 50%;
+  height: inherit;
+  margin: 0 auto;
+  background-size: 100%;
+  background-image: url(../img/character/nanase.png);
+}
+
 
 
 
 
 .text p {
   /*キャラ紹介の本文部分*/
+  font-size: 18px;
   font-weight: 400;
   line-height: 2.0em;
   color: #965d5d;
+  box-sizing: border-box;
+  margin-top: 50px;
 }
+
+@media screen and (min-width:400px) and (max-width: 800px) {
+  /*使うかわからないけど*/
+
+  .text {
+    position: relative;
+    left: -25%;
+   /* width: 350px;*/
+    margin: 0 auto;
+    line-height: 1.8;
+   /* font-size: 60px;*/
+    z-index: 1;
+    display:inline-block;
+    flex-direction: column;
+
+    padding: 40px;
+    /*★★連動箇所*/
+    text-align: left;
+    background-image: url("../img/character/text_bg.png") ;
+    background-repeat: repeat-y;
+    background-size: 100%;
+ 
+    filter: drop-shadow(10px 10px 0px rgb(155, 152, 124, 0.15));
+    filter: drop-shadow();
+
+    transform-origin: left top;
+    /*基準左上*/
+    rotate: -10deg;
+    
+ 
+  }
+
+
+  .chara_head {
+    /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
+    /*font-size: 24px;/*clamp(1.8rem, calc(1.25vw + 1.5rem), 3.2rem);*/
+    line-height: 1.4091;
+    font-weight: 800;
+    margin-bottom: 0px;
+  }
+
+  .chara_head_name {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+
+    /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
+    font-size: 36px ;
+    line-height: 1.4091;
+    font-weight: 800;
+    color: #965d5d;
+ 
+  }
+
+  .chara_head_name_kana {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    /*200-800*/
+    letter-spacing: 0.1em;
+    font-stretch: semi-condensed;
+    font-style: normal;
+
+
+    font-size: 24px;
+    left: 10px !important;
+    position: relative;
+ 
+  }
+
+  .text p {
+    /*キャラ紹介の本文部分*/
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.0em;
+    color: #965d5d;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /*使うかわからないけど*/
+
+  .text {
+    position: relative;
+    left: -25%;
+    ;
+    margin: 0 auto;
+
+    line-height: 1.8;
+   /* font-size: 18px;*/
+    z-index: 1;
+    display: inline-block;
+    flex-direction: column;
+
+    padding: 10px;
+    /*★★連動箇所*/
+
+    text-align: left;
+
+
+    background-image: url("../img/character/text_bg.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    filter: drop-shadow(10px 10px 0px rgb(155, 152, 124, 0.15));
+    filter: drop-shadow();
+
+    transform-origin: left top;
+    /*基準左上*/
+    rotate: -10deg;
+   
+  }
+
+
+  .chara_head {
+    /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
+    /*font-size: 24px;/*clamp(1.8rem, calc(1.25vw + 1.5rem), 3.2rem);*/
+    line-height: 1.4091;
+    font-weight: 800;
+    margin-bottom: 0px;
+  }
+
+  .chara_head_name {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+
+    /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
+    font-size: 10px ;
+    line-height: 1.4091;
+    font-weight: 800;
+    color: #965d5d;
+  }
+
+  .chara_head_name_kana {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    /*200-800*/
+    letter-spacing: 0.1em;
+    font-stretch: semi-condensed;
+    font-style: normal;
+
+
+    font-size: 9px !important;
+    top: -10px;
+    left: 10px !important;
+    position: relative;
+  }
+
+  .text p {
+    /*キャラ紹介の本文部分*/
+    font-size: 5px;
+    font-weight: 400;
+    line-height: 2.0em;
+    color: #965d5d;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+}
+
 
 
 /*.c_nanase .text {
@@ -715,13 +918,7 @@ color: #965d5d;
   border-bottom-right-radius: 100px;
 }
 
-.chara_head {
-  /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-  font-size: clamp(1.8rem, calc(1.25vw + 1.5rem), 3.2rem);
-  line-height: 1.4091;
-  font-weight: 800;
-  margin-bottom: 24px;
-}
+
 
 /*
 .chara_head_name{
@@ -751,7 +948,7 @@ color:red;
 .frame {
   width: 768px;
   height: 1378px;
-  
+
 }
 
 .frame .overlap-group {

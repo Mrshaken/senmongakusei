@@ -1,0 +1,128 @@
+
+  /*エリアの表示非表示と形状*/
+  .area {
+    display: none;/*はじめは非表示*/
+    opacity: 0;/*透過0*/
+  
+    padding:50px 20px;
+  }
+  
+  /*areaにis-activeというクラスがついた時の形状*/
+  .area.is-active {
+      display: block;/*表示*/
+      animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+  }
+  
+  @keyframes displayAnime{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  /*========= レイアウトのためのCSS ===============*/
+  
+  body{
+    background:#eee;
+  }
+  
+  ul{
+    list-style:none;
+  }
+  
+  a{
+    color:#333;
+    text-decoration: none;
+  }
+  
+
+  .area h2{
+    font-size:1.3rem;
+    margin:0 0 20px 10px;
+  }
+  
+  .area li{
+    padding: 10px; 
+    border-bottom: 1px solid #ddd;
+  }
+
+/*キャラ表記CSS*/
+
+
+
+  /*キャラリスト*/
+  /*TAB*/
+   .chara_list{
+    width: 60%;
+    margin: 0 auto;;
+  /*  margin: 40px auto 30px;*/
+  } 
+
+ .chara_list ul{
+ /*   justify-content: space-between;
+    /*display: flex;*//*ON:サイズ変更なし：大きさ固定 OFF:サイズ変更あり、一列固定*/
+    /*flex-wrap: wrap;*/
+    display: flex;
+
+
+  }
+  .chara_icon{
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin: 6px auto 0;
+
+    
+}
+
+.chara_icon img{
+  /*参考URL:https://photoshopvip.net/144266#tip12*/
+ /* aspect-ratio: 3/2;/*サイズ揃える*/
+ /* object-fit:contain;*/
+}
+.chara{
+    width: 60%;
+    margin: 0 auto;
+    
+  
+}
+.chara img{
+
+    display: block; margin: auto;
+
+}
+
+
+/*tabの形状*/
+.tab{
+ /*   display: flex;
+    flex-wrap: wrap;*/
+  }
+  .tab li img{
+
+  }
+  .tab li img:hover{
+    scale: 1.2;
+    transition: 0.5s;
+    /*animation:0.5s linear  rotation1;/*回転アニメーション*/
+  }
+  @keyframes rotation1{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(360deg); }
+  }
+  /*liにactiveクラスがついた時の形状*/
+  .tab li.active img{
+    scale: 1.3;
+  }
+  
+  .tab li.active a{
+    pointer-events: none; 
+  }
+  
+  
