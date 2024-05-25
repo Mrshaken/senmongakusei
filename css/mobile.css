@@ -632,34 +632,6 @@ img {
 /*キャラクター本文（共通）*/
 
 
-.text {
-  position: relative;
-  left: -25%;
-  ;
-  margin: 0 auto;
-
-  line-height: 1.8;
- /* font-size: 18px;*/
-  z-index: 1;
-  display: inline-block;
-  flex-direction: column;
-
-  padding: 40px;
-  /*★★連動箇所*/
-
-  text-align: left;
-
-
-  background-image: url("../img/character/text_bg.png");
-  background-size: 100%;
-  filter: drop-shadow(10px 10px 0px rgb(155, 152, 124, 0.15));
-  filter: drop-shadow();
-
-  transform-origin: left top;
-  /*基準左上*/
-  rotate: -10deg;
-
-}
 
 
 .chara_head {
@@ -713,11 +685,49 @@ img {
   height: inherit;
   margin: 0 auto;
   background-size: 100%;
-  background-image: url(../img/character/nanase.png);
+  background-image: url(../img/character/mashiro_2.png);
+}
+
+.img_tobitani{
+  width: 25%;
+  height: inherit;
+  margin: 0 auto;
+  background-size: 100%;
+  background-image: url(../img/character/tobitani_2.png);
 }
 
 
 
+
+.text {
+  position: relative;
+  left: -25%;
+  ;
+  margin: 0 auto;
+
+  line-height: 1.8;
+ /* font-size: 18px;*/
+  z-index: 1;
+  display: inline-block;
+  flex-direction: column;
+
+  padding: 40px;
+  /*★★連動箇所*/
+
+  text-align: left;
+
+
+  background-image: url("../img/character/text_bg.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  filter: drop-shadow(10px 10px 0px rgb(155, 152, 124, 0.15));
+  filter: drop-shadow();
+
+  transform-origin: left top;
+  /*基準左上*/
+  rotate: -10deg;
+
+}
 
 
 .text p {
