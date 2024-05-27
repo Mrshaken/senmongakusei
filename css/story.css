@@ -176,12 +176,13 @@ p {
    STORY
 ======================== */
 .daily_year {
-  color: rgb(217, 67, 67);
+ /* color: rgb(217, 67, 67);*/
+ color: rgba(217, 67, 67, 0.20);
   /* text-align: center; */
-  text-shadow: 2px 2px rgb(217, 67, 67 .15);
+ /* text-shadow: 2px 2px rgb(217, 67, 67 .15);*/
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-size: calc(2.0rem * 1.5);
+  font-size: calc(2.0rem * 4.5);
   font-weight: 500;
   line-height: 3rem;
    padding:5px 0 5px 20px;
@@ -193,15 +194,17 @@ p {
   letter-spacing: 0.2em;
   /* margin: 0 0 0.5em; */
   /* padding: 1em 0.2em; */
-  width: 7em;
+  /*width: 7em;*/
   border-radius: 13px;
   position: relative;
   /* background-color: #f9f6c4; 
   /*background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 16px, transparent 0, transparent 28px);*/
  /* border:1px solid  #D94343;*/
   margin-left: 15px;
-  top: calc(50px* 1);
+  top: calc(50px* 1.2);
   left: 20px;
+
+  overflow-wrap : break-word;
 }
 
 
