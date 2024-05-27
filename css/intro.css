@@ -170,12 +170,13 @@ article {
     margin-bottom: 24px;
 }
 
-.intro_head_blue {
-    color: #45bbff;
+
+.intro_head_green{
+    color: #618a64;
 }
 
-.intro_head_pink {
-    color: #ee858c;
+.intro_head_red{
+    color: #dd3d32;
 }
 
 @media screen and (max-width: 767px) {

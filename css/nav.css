@@ -5,7 +5,7 @@
     position:fixed;
     z-index: 999;
     /*ナビのスタート位置と形状*/
-  top:40;
+  top:0;
     right: -120%;
   width:100%;
     height: 100vh;/*ナビの高さ*/
@@ -13,7 +13,7 @@
     /*動き*/
   transition: all 0.6s;
   background:rgba(107, 44, 44, 0.7);/*背景を少し透過させる*/
-  padding: 100px 0;
+  padding: 200px 0;
 }
 
 /*アクティブクラスがついたら位置を0に*/
@@ -34,8 +34,8 @@
     -webkit-overflow-scrolling: touch;
 }
 
-
-/*========= ボタンのためのCSS ===============*/
+@media screen and (max-width:479px) {
+    /*========= ボタンのためのCSS ===============*/
 .openbtn1{
     position:fixed;
       z-index: 9999;/*ボタンを最前面に*/
@@ -88,6 +88,8 @@
       width: 30%;
   }
   
+}
+
 
 /*ナビゲーション*/
 
@@ -118,20 +120,6 @@
     margin-bottom: 10px;
     pointer-events: none;
 }
-.headerNavLists__item:before{
-    content: '';
-    position: absolute;
-    width: 81px;
-    height: 38px;
-    top: calc(50% - 19px);
-    right: 5px;
-    background: url(../img/common/nav_mark_p.svg) no-repeat center right / contain;
-    transition: .3s ease;
-}
-.headerNavLists__item:hover::before,
-.headerNavLists__item.is-active::before{
-    right: 0;
-}
 .navLink{
     display: inline-block;
     width: 100%;
@@ -143,7 +131,7 @@
     color: #D94343;
     padding: 12px 0 12px 20px;
     font-size: 18px;
-    line-height: 1;
+    /*line-height: 1;*/
     letter-spacing: -0.05em;
     text-decoration: none;
     position: relative;
@@ -173,6 +161,7 @@
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     transition: .3s ease;
+    z-index: 1;
 }
 .navLink:hover::after,
 .headerNavLists__item.is-active .navLink:after{
@@ -184,11 +173,12 @@
 }
 .navTxt{
     position: relative;
-    z-index: 2;
+    z-index: 20;
 }
 .navTxt span{
     font-size: 14px;
     padding-left: 8px;
+    
 }
 
 
@@ -205,7 +195,8 @@
 }
 .headerNavLists__item:nth-of-type(even) .navLink:after,
 .headerNavLists__item:nth-of-type(even) .navLink.is-active:after{
-    background-color: #d4efff;
+    /*color:#fff;*/
+    background-color: #78ac89;
 }
 .headerNavLists__item:nth-of-type(even) .navLink:hover,
 .headerNavLists__item.is-active:nth-of-type(even) .navLink{
@@ -213,13 +204,13 @@
 }
 
 
-@media screen and (max-width:767px){
+
     .headerNav {
         position: relative;
         z-index: 1;
     }
     .headerNavLists__item{
-        width: 94.4%;
+        width: 90%;
         padding-right: 9.334%;
         margin-bottom: 2.6667%;
     }
@@ -236,57 +227,56 @@
         border-left-width: 0px;
         font-size: 4.5334vw;
         padding: 2.6667vw 0 2.6667vw 8.5334vw;
-        pointer-events: none;
-    }
-    .header.is-active .navLink{
         pointer-events: auto;
     }
     .navLink:before{
-        top: -0.5334vw;
-        left: -0.5334vw;
-        right: -0.4vw;
-        bottom: -0.4vw;
-        box-shadow: 0.4vw 0.4vw #D94343;
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -3px;
+        bottom: -3px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        box-shadow: 3px 3px #D94343;
+    }
+    .navLink:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: #D94343;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        transition: .3s ease;
+    }
+    .navLink:hover::after,
+    .headerNavLists__item.is-active .navLink:after{
+        width: 100%;
+    }
+    .navLink:hover,
+    .headerNavLists__item.is-active .navLink{
+        color: #926453;
+    }
+
+    .header.is-active .navLink{
+        pointer-events: auto;
     }
     .navTxt span{
         font-size: 3.2vw;
     }
+
+@media screen and (min-width:480px) {
+/*PCサイズの場合はハンバーガーメニューにしない*/
 }
 
 /**
 * navBtn
 */
 @media screen and (max-width:767px){
-    .header__navBtnWrap {
-        background-color: #fff899;
-        width: 12.6667vw;
-        height: 12.6667vw;
-        border-radius: 50%;
-        border: 0.5334vw solid #ee858c;
-        position: fixed;
-        top: 0;
-        margin-top: 3.3334%;
-        right: 3.3334%;
-        z-index: 4;
-        transition: .2s ease;
-    }
-    .header.is-active .header__navBtnWrap {
-        transform: translate(0.4vw,0.4vw);
-    }
-    .header__navBtnWrap:before{
-        content: '';
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        box-shadow: 0.8vw 0.8vw #ee858c;
-        border-radius: 50%;
-        transition: .2s ease;
-    }
-    .header.is-active .header__navBtnWrap:before {
-        box-shadow: 0.4vw 0.4vw #ee858c;
-    }
+
     .header__navBtn {
         display: flex;
         align-items: center;
@@ -294,42 +284,5 @@
         width: 100%;
         height: 100%;
         position: relative;
-    }
-    .header__navBtn__lineWrap {
-        width: 5.0667vw;
-        height: 4.2667vw; /** 32px **/
-        position: relative;
-    }
-    .header__navBtn--line {
-        background-color: #ee858c;
-        display: block;
-        width: 100%;
-        height: 0.8vw;
-        margin: auto;
-        position: absolute;
-        border-radius: 4px;
-        transition: .3s ease;
-    }
-    .header__navBtn--line:nth-child(1) {
-        top: 0;
-    }
-    .header__navBtn--line:nth-child(2) {
-        top: 0;
-        bottom: 0;
-    }
-    .header__navBtn--line:nth-child(3) {
-        bottom: 0;
-    }
-    .header.is-active .header__navBtn--line:nth-child(1) {
-        top: 1.7334vw;
-        transform: rotate(45deg);
-    }
-    .header.is-active .header__navBtn--line:nth-child(2) {
-        transform: translateX(10px);
-        opacity: 0;
-    }
-    .header.is-active .header__navBtn--line:nth-child(3) {
-        bottom: 1.7334vw;
-        transform: rotate(-45deg);
     }
 }
