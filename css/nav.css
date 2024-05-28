@@ -2,7 +2,7 @@
 
 #g-nav {
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-    /*position: fixed;*/
+    position: fixed;
     z-index: 999;
     /*ナビのスタート位置と形状*/
     top: 0;
@@ -37,10 +37,10 @@
     -webkit-overflow-scrolling: touch;
 }
 
-  /*========= ボタンのためのCSS ===============*/
+/*========= ボタンのためのCSS ===============*/
 @media screen and (max-width:479px) {
 
-  
+
     .openbtn1 {
         position: fixed;
         z-index: 9999;
@@ -177,10 +177,12 @@
     z-index: 1;
 }
 
-.headerNavLists__item:hover  a{
-    color: blue!important;;
+.headerNavLists__item:hover a {
+    color: blue !important;
+    ;
     z-index: 500000 !important;
 }
+
 /*
 .navLink:hover::after,
 .headerNavLists__item.is-active .navLink:after {
@@ -274,6 +276,7 @@
 .headerNavLists__item.is-active .navLink:after {
     width: 100%;
 }
+
 /*
 .navLink:hover,
 .headerNavLists__item.is-active .navLink {
@@ -318,24 +321,28 @@
 .two-column {
     display: flex;
     height: 1200px;
-    height: 1300px; /*PC版navとkeyvisualの高さを設定する*/
+    height: 1300px;
+    /*PC版navとkeyvisualの高さを設定する*/
 }
 
 @media screen and (min-width:767px) {
     .pc-nav {
-      /* background-color: #568C6D;*//*適応範囲確認用*/
+        /* background-color: #568C6D;*/
+        /*適応範囲確認用*/
         display: inline-block;
         height: inherit;
     }
 
     .pc-nav {
         width: 30% !important;
-     padding-top:15%;
+        padding-top: 15%;
     }
+
     .key-visual{
         display: flex;
         width: 70%;
     }
+
     main {
         width: 70% !important;
         margin: none !important;

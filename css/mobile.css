@@ -1201,5 +1201,15 @@ color:red;
     padding-top: 16px;
     font-size: 1rem;
    
-
 }
+}
+@media screen and (min-width:767px){
+  .pc-main{
+   /* display: flex;*/
+    position: relative;
+    width: 60%;
+    margin-left:5%;
+}
+}
+
+

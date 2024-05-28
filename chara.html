@@ -7,7 +7,7 @@
     <meta name="description" content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    
+
     <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
     <link rel="stylesheet" type="text/css"
         href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
     <link rel="stylesheet" type="text/css" href="css/chara.css">
     <link rel="stylesheet" type="text/css" href="css/tab.css">
-
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
 
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,25 +28,92 @@
 <body>
 
     <div class="wrapper">
+        <section class="two-column">
+            <nav class="pc-nav">
+                <div class="pc-nav-div"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                    <ul>
+                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="#">Top</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#">About</a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#">Introduction</a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="story.html">Story</a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="chara.html">Character</a></li>
+                        <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
+                                href="https://senmongakkou.blog">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="pc-main">
+                <div class="kanban"><img src="../img/common/character.webp"></div>
+                <div class="chara_list">
+                    <ul class="tab">
+                        <li class="chara_icon"><a href="#mashiro"><img src="../img/character/cl_mashiro.png"></a></li>
+                        <li class="chara_icon"><a href="#tobitani"><img src="../img/character/cl_tobitani.png"></a></li>
+                        <li class="chara_icon"><a href="#nanase"><img src="../img/character/cl_nanase.png"></a></li>
+                        <li class="chara_icon"><a href="#momoe"><img src="../img/character/cl_momoe.png"></a></li>
+                        <li class="chara_icon"><a href="#simozuki"><img src="../img/character/chara_common.png"></a>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="chara_list">
-            <ul class="tab">
-                <li class="chara_icon"><a href="#mashiro"><img src="../img/character/cl_mashiro.png"></a></li>
-                <li class="chara_icon"><a href="#tobitani"><img src="../img/character/cl_tobitani.png"></a></li>
-                <li class="chara_icon"><a href="#nanase"><img src="../img/character/cl_nanase.png"></a></li>
-                <li class="chara_icon"><a href="#momoe"><img src="../img/character/cl_momoe.png"></a></li>
-                <li class="chara_icon"><a href="#simozuki"><img src="../img/character/chara_common.png"></a></li>
-            </ul>
-        </div>
-
-        <div id="mashiro" class="area is-active"><!--最初は真白がis-active（選択されている状態）-->
-            <div class="chara_item c_nanase">
-                <div class="picture">
-                    <div class=" img_nanase">
-                    <div class=" transByImg">
+                <div id="mashiro" class="area is-active"><!--最初は真白がis-active（選択されている状態）-->
+                    <div class="chara_item c_nanase">
+                        <div class="picture">
+                            <div class=" img_nanase">
+                                <div class=" transByImg">
+                                    <div class="text">
+                                        <h3 class="chara_head">
+                                            <span class="chara_head_name c_nanase">真白　優</span><br>
+                                            <span class="chara_head_name_kana c_nanase">NANASE KOTOMI</span><br>
+                                            <!--  <span class="chara_head_lines">決めゼリフ的ななにか</span><br>-->
+                                        </h3>
+                                        <p>
+                                            都会育ちで面倒見の良いお姉さん。<br>
+                                            真面目で課題も料理もこなしてしまうハイスペック女子。<br>
+                                            将来は自分のデザインした商品をお店に並べたいと思っている。<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/area-->
+                    </div>
+                </div>
+                <div id="tobitani" class="area">
+                    <div class="chara_item c_nanase">
+                        <div class="picture">
+                            <div class=" img_tobitani">
+                                <div class=" transByImg">
+                                    <div class="text">
+                                        <h3 class="chara_head">
+                                            <span class="chara_head_name c_nanase">跳谷　翔平</span><br>
+                                            <span class="chara_head_name_kana c_nanase">TOBITANI SHOHEI</span><br>
+                                            <!--  <span class="chara_head_lines">決めゼリフ的ななにか</span><br>-->
+                                        </h3>
+                                        <p>
+                                            都会育ちで面倒見の良いお姉さん。<br>
+                                            真面目で課題も料理もこなしてしまうハイスペック女子。<br>
+                                            将来は自分のデザインした商品をお店に並べたいと思っている。<br>
+                                            都会育ちで面倒見の良いお姉さん。<br>
+                                            真面目で課題も料理もこなしてしまうハイスペック女子。<br>
+                                            将来は自分のデザインした商品をお店に並べたいと思っている。<br>
+                                            都会育ちで面倒見の良いお姉さん。<br>
+                                            真面目で課題も料理もこなしてしまうハイスペック女子。<br>
+                                            将来は自分のデザインした商品をお店に並べたいと思っている。<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/area-->
+                    </div>
+                    <!--/area-->
+                </div>
+                <div id="nanase" class="area">
+                    <div class="chara_item c_nanase">
+                        <div class="picture c_nanase"> <img src="../img/character/nanase.png"></div>
                         <div class="text">
                             <h3 class="chara_head">
-                                <span class="chara_head_name c_nanase">真白　優</span><br>
+                                <span class="chara_head_name c_nanase">七瀬 琴美</span><br>
                                 <span class="chara_head_name_kana c_nanase">NANASE KOTOMI</span><br>
                                 <!--  <span class="chara_head_lines">決めゼリフ的ななにか</span><br>-->
                             </h3>
@@ -57,72 +124,28 @@
                             </p>
                         </div>
                     </div>
-                    </div>
+                    <!--/area-->
                 </div>
-                <!--/area-->
-            </div>
-        </div>
-        <div id="tobitani" class="area">
-            <div class="chara_item c_nanase">
-                <div class="picture">
-                    <div class=" img_tobitani">
-                    <div class=" transByImg">
-                        <div class="text">
-                            <h3 class="chara_head">
-                                <span class="chara_head_name c_nanase">跳谷　翔平</span><br>
-                                <span class="chara_head_name_kana c_nanase">TOBITANI SHOHEI</span><br>
-                                <!--  <span class="chara_head_lines">決めゼリフ的ななにか</span><br>-->
-                            </h3>
-                            <p>
-                                都会育ちで面倒見の良いお姉さん。<br>
-                                真面目で課題も料理もこなしてしまうハイスペック女子。<br>
-                                将来は自分のデザインした商品をお店に並べたいと思っている。<br>
-                                都会育ちで面倒見の良いお姉さん。<br>
-                                真面目で課題も料理もこなしてしまうハイスペック女子。<br>
-                                将来は自分のデザインした商品をお店に並べたいと思っている。<br>
-                                都会育ちで面倒見の良いお姉さん。<br>
-                                真面目で課題も料理もこなしてしまうハイスペック女子。<br>
-                                将来は自分のデザインした商品をお店に並べたいと思っている。<br>
-                            </p>
-                        </div>
-                    </div>
-                    </div>
+                <div id="momoe" class="area">
+                    <!--/area-->
                 </div>
-                <!--/area-->
-            </div>
-            <!--/area-->
-        </div>
-        <div id="nanase" class="area">
-            <div class="chara_item c_nanase">
-                <div class="picture c_nanase"> <img src="../img/character/nanase.png"></div>
-                <div class="text">
-                    <h3 class="chara_head">
-                        <span class="chara_head_name c_nanase">七瀬 琴美</span><br>
-                        <span class="chara_head_name_kana c_nanase">NANASE KOTOMI</span><br>
-                        <!--  <span class="chara_head_lines">決めゼリフ的ななにか</span><br>-->
-                    </h3>
-                    <p>
-                        都会育ちで面倒見の良いお姉さん。<br>
-                        真面目で課題も料理もこなしてしまうハイスペック女子。<br>
-                        将来は自分のデザインした商品をお店に並べたいと思っている。<br>
-                    </p>
+                <div id="simozukis" class="area">
+                    <!--/area-->
+                </div>
+                <div id="syakeyama" class="area">
+                    <!--/area-->
                 </div>
             </div>
-            <!--/area-->
-        </div>
-        <div id="momoe" class="area">
-            <!--/area-->
-        </div>
-        <div id="simozukis" class="area">
-            <!--/area-->
-        </div>
-        <div id="syakeyama" class="area">
-            <!--/area-->
-        </div>
+        </section>
         <!--wrapper-->
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/tab.js"></script>
+    <!--ハンバーガーメニュー用js-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-14/js/5-1-14.js"></script>-->
+    <script src="js/humbger.js"></script>
 </body>
 </body>

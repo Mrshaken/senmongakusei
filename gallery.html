@@ -10,12 +10,49 @@
 <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 <link rel="stylesheet" type="text/css" href="css/gallery.css">
+<link rel="stylesheet" type="text/css" href="css/mobile.css">
+<link rel="stylesheet" type="text/css" href="css/nav.css">
 </head>
 
 <body>
 
-<div class="wrapper">
-          
+  <div class="wrapper">
+    <!--ヘッダー（ロゴ）　ハンバーガーボタン-->
+    <header id="header">
+        <h1 class="hlogo"><span class="logo"><span class="hd">専門学生の日常</span></span></h1>
+
+
+        <div class="openbtn1"><span></span><span></span><span></span></div>
+        <nav id="g-nav">
+            <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                <ul>
+                    <li class="headerNavLists__item"><a class="navLink" href="#"><span
+                                class=".navTxt">Top</span></a></li>
+                    <li class="headerNavLists__item"><a class="navLink" href="#">About</a></li>
+                    <li class="headerNavLists__item"><a class="navLink" href="#">Introduction</a></li>
+                    <li class="headerNavLists__item"><a class="navLink" href="story.html">Story</a></li>
+                    <li class="headerNavLists__item"><a class="navLink" href="chara.html">Character</a></li>
+                    <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
+                            href="https://senmongakkou.blog">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="two-column">
+      <nav class="pc-nav"><!--PC版用のナビゲーション-->
+          <div class="pc-nav-div"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+              <ul>
+                  <li class="headerNavLists__item"><a class="navLink" href="#"><span class="#">Top</span></a></li>
+                  <li class="headerNavLists__item"><a class="navLink" href="#">About</a></li>
+                  <li class="headerNavLists__item"><a class="navLink" href="#">Introduction</a></li>
+                  <li class="headerNavLists__item"><a class="navLink" href="story.html">Story</a></li>
+                  <li class="headerNavLists__item"><a class="navLink" href="chara.html">Character</a></li>
+                  <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
+                          href="https://senmongakkou.blog">Blog</a></li>
+              </ul>
+          </div>
+      </nav>
+      <div class="pc-main"><!--PC版用のメイン-->        
 <div class="kanban"><img src="../img/common/gallery.webp"></div>
 
 
@@ -213,9 +250,17 @@
     </li>
   </ul>
 
-<!--/wrapper--></div>
+</div>
+</section>
+  <!--/wrapper--></div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
 <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
 <script src="js/gallery.js"></script></body>
+
+<!--ハンバーガーメニュー-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!--<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-14/js/5-1-14.js"></script>-->
+<script src="js/humbger.js"></script>
 </html>
