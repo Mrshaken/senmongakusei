@@ -279,6 +279,80 @@ a:active {
   color: #333333;
 }
 
+
+  .twi_h2 {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 70px);
+    width: 140px;
+    height: 36px;
+    border: 2px solid #ee858c;
+    border-top-width: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 8px, transparent 0, transparent 14px);
+    background-color: #fff;
+    font-size: 1.3rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: #ee858c;
+    padding-top:6px;
+  }
+
+  .sp_twitterWidget {
+    width: 70%;
+    margin: 7.3334% auto 7%;
+    /* padding: ;*/
+    border-radius: 20px;
+    border: 2px solid #ee858c;
+    position: relative;
+    background-color: #fff899;
+    padding: 42px 3.2% 24px;
+    z-index: 3;
+  }
+  .update-block{
+	/*	width: 450px;*/
+		height: 305px;
+		margin: 0 auto;
+		padding: 25px 15px 0;
+		overflow: auto;
+		overflow-style: none; 
+	}
+	.update-block::-webkit-scrollbar {
+		display: none;
+	}
+	.update-box{
+		margin:0 0 1.6em;
+		padding-bottom:1em;
+		border-bottom:1px solid #bebebe;
+	}
+	.update-date{
+		font-size:12px;
+		font-weight: bold;
+		color: #000;
+		float: left;
+		padding-bottom: 0.8em;
+	}
+	.update-new{
+		font-size:10px;
+		padding: 0.1em 0.5em;
+		background: #e84b91;
+		color: #ffffff;
+		margin: -0.1em 0.7em 0 0.7em;
+		float: left;
+	}
+	.update-text{
+		font-size:14px;
+		color: #000;
+		line-height:1.5em;
+		clear: both;
+		padding-bottom: 0.6em;
+	}
+
+
+
 @media screen and (max-width: 767px) {
   .sp_twitterWidget {
     width: 85.3334%;
@@ -295,24 +369,8 @@ a:active {
 
 @media screen and (max-width: 767px) {
   .twi_h2 {
-    position: absolute;
-    top: 0px;
-    left: calc(50% - 70px);
-    width: 140px;
-    height: 28px;
-    border: 2px solid #ee858c;
-    border-top-width: 0;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 8px, transparent 0, transparent 14px);
-    background-color: #fff;
-    font-size: 1.3rem;
-    line-height: 1;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    text-align: center;
-    color: #ee858c;
-    padding-top: 6px;
+    height: 32px;
+    padding-bottom:6px;
   }
 }
 
@@ -376,7 +434,7 @@ a:active {
 
 /*スクロールバー加工*/
 .scroller {
-  width: 400px;
+ /* width: 400px;*/
   height: 200px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
@@ -968,11 +1026,7 @@ color:red;
 /*=============================================================================*/
 /*figma->トップ*/
 
-.frame {
-  width: 768px;
-  height: 1378px;
 
-}
 
 .frame .overlap-group {
   position: relative;
@@ -980,6 +1034,7 @@ color:red;
   height: 1322px;
   top: 5px;
   left: 20px;
+  margin:0 auto;
 }
 
 .frame .syakeyama {
@@ -1036,11 +1091,33 @@ color:red;
   object-fit: cover;
 }
 
+@media screen  and (max-width:769px){
+  .frame .overlap-group {
+    position: relative;
+    width: 748px;
+    height: 1322px;
+    top: 5px;
+    left: 20px;
+  }
+  
+  .frame {
+    width: 768px;
+    height: 1378px;
+  
+  }
+}
+
 /*=============================================================================*/
 /*TITLE:footer*/
 /*ABOUT:フッターのCSS*/
 /**/
 /*=============================================================================*/
+#footer {
+  position: relative;
+  height: auto;
+  padding: 32px 0 48px;
+}
+
 @media screen and (max-width: 767px) {
   #footer {
     position: relative;
@@ -1082,9 +1159,11 @@ color:red;
 /** FOOTER BNR **/
 .authorLink {
   position: relative;
-  bottom: 12px;
-  width: 187.5px;
-  height: 52.5px;
+  margin:0 auto;
+  width: 210px;
+ /* bottom: 12px;
+
+  height: 52.5px;*/
   z-index: 5;
 }
 
@@ -1096,6 +1175,22 @@ color:red;
   width: 100%;
 }
 
+.authorLink {
+  position: relative;
+  margin: 58px auto 0;
+}
+
+.copyright {
+  padding-top: 32px;
+  font-size: 1rem;
+  right: unset;
+  bottom: unset;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  letter-spacing: -0.05em;
+}
+
 @media screen and (max-width: 767px) {
   .authorLink {
     position: relative;
@@ -1103,14 +1198,8 @@ color:red;
   }
 
   .copyright {
-    padding-top: 32px;
+    padding-top: 16px;
     font-size: 1rem;
-    right: unset;
-    bottom: unset;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    letter-spacing: -0.05em;
-  }
+   
 
 }
