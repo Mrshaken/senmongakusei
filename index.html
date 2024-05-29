@@ -27,8 +27,8 @@
             <nav id="g-nav">
                 <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
                     <ul>
-                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="#">Top</span></a></li>
-                        <li class="headerNavLists__item"><a class="navLink" href="#">About</a></li>
+                        <li class="headerNavLists__item js-item"><a class="navLink" href="#"><span class="navTxt">Top</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="navTxt">About</span></a></li>
                         <li class="headerNavLists__item"><a class="navLink" href="#">Introduction</a></li>
                         <li class="headerNavLists__item"><a class="navLink" href="story.html">Story</a></li>
                         <li class="headerNavLists__item"><a class="navLink" href="chara.html">Character</a></li>
@@ -44,31 +44,34 @@
             <nav class="pc-nav">
                 <div class="pc-nav-div"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
                     <ul>
-                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="#">Top</span></a></li>
-                        <li class="headerNavLists__item"><a class="navLink" href="#">About</a></li>
-                        <li class="headerNavLists__item"><a class="navLink" href="#">Introduction</a></li>
-                        <li class="headerNavLists__item"><a class="navLink" href="story.html">Story</a></li>
-                        <li class="headerNavLists__item"><a class="navLink" href="chara.html">Character</a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="navTxt">Top</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="navTxt">About</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="navTxt">Introduction</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="story.html"><span class="navTxt">Story</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="chara.html"><span class="navTxt">Character</span></a></li>
                         <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
-                                href="https://senmongakkou.blog">Blog</a></li>
+                                href="https://senmongakkou.blog"><span class="navTxt">Blog</span></a></li>
                     </ul>
                 </div>
             </nav>
             <div class="key-visual"><!--キービジュアルArea　はじめ-->
 
-                <div class="frame">
+                <div class="frame wrap  js-wrap">
                     <div class="overlap-group">
-                        <img class="syakeyama" src="../img/character/syakeyama.png" />
-                        <img class="tobitani" src="img/character/tobitani.png" />
-                        <img class="momoe" src="img/character/momoe.png" />
-                        <img class="mashiro" src="img/character/mashiro.png" />
-                        <img class="nanase" src="img/character/nanase.png" />
-                        <img class="shimoduki" src="img/character/shimoduki.png" />
+                        <div class="syakeyama fadeUp delay-time02 item js-item" data-acc="1, 1, -1, -1" > <img class="syakeyama fadeUp delay-time02 item " src="../img/character/syakeyama.png" /></div>
+                        <img class="syakeyama fadeUp delay-time02 item "  src="../img/character/syakeyama.png" />
+                        <img class="tobitani fadeUp delay-time04 item js-item"  data-acc="2, 2, -2, -2" src="img/character/tobitani.png" />
+                        <img class="momoe fadeUp delay-time04" src="img/character/momoe.png" />
+                        <img class="mashiro fadeUp delay-time06" src="img/character/mashiro.png" />
+                        <img class="nanase fadeUp delay-time08" src="img/character/nanase.png" />
+                        <img class="shimoduki fadeUp delay-time10" src="img/character/shimoduki.png" />
                     </div>
                     <!--キービジュアルArea　おわり-->
                 </div>
             </div>
         </section>
+       
+          <!-- data-acc="translateX, translateY, rotateX, rotateY" -->
         <main id="main">
 
             <section><!--最新情報Area　はじめ-->
@@ -101,7 +104,42 @@
                 </div>
                 <!--最新情報Area　おわり-->
             </section>
-
+            <div class="wrap js-wrap">
+                <div class="item item-01 js-item" data-acc="1, 1, -1, -1">
+                  <div class="interior interior-01">い</div>
+                </div>
+                <div class="item item-02 js-item" data-acc="2, 2, -2, -2">
+                  <div class="interior interior-02">ろ</div>
+                </div>
+                <div class="item item-03 js-item" data-acc="2, 2, -2, -2">
+                  <div class="interior interior-03">は</div>
+                </div>
+                <div class="item item-04 js-item" data-acc="3, 3, -3, -3">
+                  <div class="interior interior-04">に</div>
+                </div>
+                <div class="item item-05 js-item" data-acc="3, 3, -3, -3">
+                  <div class="interior interior-05">ほ</div>
+                </div>
+              </div>
+              <br><br><br><br><br><br><br><br>
+              <div class="wrap js-wrap">
+                <div class="item item-01 js-item" data-acc="1, 1, -1, -1" style="transform: translateX(1.04167%) translateY(14.6685%) rotateX(-14.6685deg) rotateY(-1.04167deg);">
+                  <div class="interior interior-01">い</div>
+                </div>
+                <div class="item item-02 js-item" data-acc="2, 2, -2, -2" style="transform: translateX(2.08333%) translateY(29.337%) rotateX(-29.337deg) rotateY(-2.08333deg);">
+                  <div class="interior interior-02">ろ</div>
+                </div>
+                <div class="item item-03 js-item" data-acc="2, 2, -2, -2" style="transform: translateX(2.08333%) translateY(29.337%) rotateX(-29.337deg) rotateY(-2.08333deg);">
+                  <div class="interior interior-03">は</div>
+                </div>
+                <div class="item item-04 js-item" data-acc="3, 3, -3, -3" style="transform: translateX(3.125%) translateY(44.0055%) rotateX(-44.0055deg) rotateY(-3.125deg);">
+                  <div class="interior interior-04">に</div>
+                </div>
+                <div class="item item-05 js-item" data-acc="3, 3, -3, -3" style="transform: translateX(3.125%) translateY(44.0055%) rotateX(-44.0055deg) rotateY(-3.125deg);">
+                  <div class="interior interior-05">ほ</div>
+                </div>
+              </div>
+              <br><br><br><br><br><br><br><br>
             <!--<section>--> <!--キャラ配置１--><!-- 
            <div class="mv_chara_momiji mv">
                 <div class="mv_layer js-pmv layer02b" deta-depth="0.5">
@@ -214,6 +252,10 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-14/js/5-1-14.js"></script>-->
     <script src="js/humbger.js"></script>
+
+    <!--マウスカーソルで動かすjs-->
+    <script defer="" type="text/javascript" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/highlight.min.js"></script>
+    <script src="js/motion.js"></script>
     <!--
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
