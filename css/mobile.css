@@ -1056,10 +1056,10 @@ color:red;
 /*様々なキャッチコピーや文言を表記する*/
 /*=============================================================================*/
 
-.character-sub .chara1{
+.character-sub .fuchidori{
   /*フォント*/
   font-family: "Zen Maru Gothic", sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 800;
   font-style: normal;
   letter-spacing: 0.1em;
@@ -1072,6 +1072,28 @@ color:red;
   transform-origin: center;
   transform: rotate(25deg);
 
+  background: #fff;
+  text-align: center;
+
+}
+
+.fuchidori {
+  font-weight: bold;
+  font-size: 70px;
+  color: rgba(0, 0, 0, 0);
+  text-shadow: 3px 3px 0 #cd5;
+  -webkit-text-stroke: 1px #888;
+  padding: 0 0 10px;
+}
+
+.fuchidori2 {
+  font-weight: bold;
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0);
+
+  text-shadow: 3px 3px 0 #9db;
+  -webkit-text-stroke: 1px #888;
+  
 }
 
 /*=============================================================================*/
