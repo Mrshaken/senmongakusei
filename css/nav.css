@@ -309,7 +309,11 @@
 }
 
 
-
+/*PC-nav要素ごとに回転を加える*/
+.kaiten li{
+    transform-origin: center;
+    transform: rotate(-12.5deg);
+   }
 
 /*PCの場合*/
 .pc-nav {
@@ -319,6 +323,11 @@
  
   /*  transform: translateX(-20px);*/
 }
+
+ .kaiten li{
+  transform-origin: center;
+  transform: rotate(-12.5deg);
+ }
 
 .pc-nav li:first-child {
     animation: fadeIn 1s ease-out 0.3s 1 normal backwards;

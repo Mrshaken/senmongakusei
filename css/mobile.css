@@ -1290,3 +1290,103 @@ color:red;
 }
 
 
+/*=============================================================================*/
+/*TITLE:キャラアニメーション*/
+/*ABOUT:下からキャラがアニメーションする*/
+/**/
+/*=============================================================================*/
+
+/*キャラのアニメーション*/
+/* 下から */
+
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+  .delay-time02{
+    animation-delay: 0.2s;
+    }
+    
+    .delay-time04{
+    animation-delay: 0.4s;
+    }
+
+    .delay-time06{
+      animation-delay: 0.6s;
+      }
+
+      .delay-time08{
+        animation-delay: 0.8s;
+        }
+        .delay-time10{
+          animation-delay: 1.0s;
+          }
+          .item{
+          position: absolute;
+          transition: all .1s; 
+          z-index: 5;}
+
+          .wrap{
+            position: relative;
+            perspective: 50em;
+          }
+
+
+          /*https://bagelee.com/programming/perspective-mouse-interaction/*/
+          /*マウスで動くアニメーション（まだ動かない。原因わからん）*/
+.wrap{
+  position: relative;
+  perspective: 50em; 
+}
+.item {
+  position: absolute;
+  transition: all .1s; 
+ 
+ 
+}
+.item-01 {
+  z-index: 5; top: 50%; left: 50%;
+}
+
+.item-02 {
+  z-index: 4; top: 50%; left: 35%;
+}
+.item-03 {
+  z-index: 3; top: 50%; left: 65%;
+}
+.item-04 {
+  z-index: 2; top: 50%; left: 20%;
+}
+.item-05 {
+  z-index: 1; top: 50%; left: 80%;
+}
+.interior {
+  transform: translate(-50%, -50%); 
+  
+  width: 1.5em; 
+  height: 1.5em; color: #fff; background: #845080;
+}
+
+ .wrap {
+  position: relative;
+  background: var(--color-mu11);
+  padding: 50% 0 0;
+  border: 1px solid var(--color-mu07);
+  perspective: 50em;
+ }
+
