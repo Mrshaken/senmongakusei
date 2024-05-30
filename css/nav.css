@@ -178,9 +178,7 @@
 }
 
 .headerNavLists__item:hover a {
-    color: blue !important;
-    ;
-    z-index: 500000 !important;
+    color: #fff;
 }
 
 /*
@@ -213,12 +211,12 @@
 .headerNavLists__item:nth-of-type(even) .navLink.is-active:after {
     /*color:#fff;*/
     background-color: #78ac89;
-    z-index: 3;
+    /*-index: 1;*/
 }
 
 .headerNavLists__item:nth-of-type(even) .navLink:hover,
 .headerNavLists__item.is-active:nth-of-type(even) .navLink {
-    color: #926453;
+    color: #FFF;
 }
 
 
@@ -422,4 +420,13 @@
         font-weight: bold;
     }
 
+}
+
+.navTxt{
+    position: relative;
+    z-index: 2;
+}
+.navTxt span{
+    font-size: 14px;
+    padding-left: 8px;
 }
