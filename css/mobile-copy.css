@@ -189,14 +189,15 @@ body {
   border-left-width: 0px;
   border-top-width: 0px;
   /*  border-top-right-radius: 100px;*/
-  border-bottom-left-radius: 80px;
+ /* border-bottom-left-radius: 80px;
   border-bottom-right-radius: 90px;
+ */ 
   padding: 20px 20px 10px 40px;
 
   position: relative;
   background-color: #fff;
-  background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 16px, transparent 0, transparent 28px);
-
+  /*background-image: repeating-linear-gradient(-45deg, #fff899, #fff899 16px, transparent 0, transparent 28px);
+*/
   margin-bottom: 24px;
   margin-right: 3px;
   margin-left: 20px;
