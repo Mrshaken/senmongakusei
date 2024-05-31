@@ -121,7 +121,7 @@
  * headerNav
  */
 .headerNavLists__item {
-    width: 340px;
+    width: 37vw;/*280px;   /*nav帯の長さはここで調整*/
 
     display: inline-block;
     padding-right: 9.334%;
@@ -309,11 +309,13 @@
 }
 
 
-/*PC-nav要素ごとに回転を加える*/
-.kaiten li{
-    transform-origin: center;
-    transform: rotate(-12.5deg);
-   }
+
+
+   /*=============================================================================*/
+/*TITLE:メニューnav(PC)*/
+/*ABOUT:メニューナビゲーションのアニメーション設定も兼ねる*/
+/**/
+/*=============================================================================*/
 
 /*PCの場合*/
 .pc-nav {
@@ -324,13 +326,17 @@
   /*  transform: translateX(-20px);*/
 }
 
+/*PC-nav要素ごとに回転を加える*/    
  .kaiten li{
-  transform-origin: center;
-  transform: rotate(-12.5deg);
+    transform: rotate(-12.5deg);
+ /* transform: rotate(-12.5deg);*/
+
  }
 
 .pc-nav li:first-child {
+  
     animation: fadeIn 1s ease-out 0.3s 1 normal backwards;
+    
   }
   .pc-nav li:nth-child(2) {
     animation: fadeIn 1.2s ease-out 0.5s 1 normal backwards;
@@ -363,6 +369,8 @@
  
 }
 
+/*TITLE:nav背景アニメーション*/
+
 /*背景だけ乗算効果を与える*/
 /*https://note.com/mitsuru_h_cc/n/n379e3ffabf94*/
 .bg-green:before{
@@ -381,20 +389,36 @@
 
   .bg-green:before {
     padding: 10px;
-    animation: fadeIn 0.8s ease 0.5s 1 normal backwards;
+    animation: fadeInBg 0.8s ease 0.5s 1 normal backwards;
   }
    
   @keyframes fadeIn {
     from {
       opacity: 0;
+    
       transform: translateX(-20px);
     }
     to {
       opacity: 1;
       transform: translateX(0);
+      transform: rotate(-12.5deg);
+  
     }
   }
-@media screen and (min-width:767px) {
+
+  @keyframes fadeInBg {
+    from {
+      opacity: 0;
+    
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+  
+    }
+  }
+@media screen and (min-width:479px) {
     .pc-nav {
         /* background-color: #568C6D;*/
         /*適応範囲確認用*/
@@ -403,8 +427,10 @@
     }
 
     .pc-nav {
-        width: 30% !important;
+       width: 30%;
         padding-top: 15%;
+
+        left: -3%;/*.kaiten適用時　nav帯の位置調整で必須*/
     }
 
     .key-visual{
@@ -434,6 +460,7 @@
 .navTxt{
     position: relative;
     z-index: 2;
+    padding-left: 18%;/*.kaiten適用時　nav帯と文字位置調整のため必要*/
 }
 .navTxt span{
     font-size: 14px;
