@@ -429,7 +429,7 @@
     .pc-nav {
        width: 30%;
         padding-top: 15%;
-
+        position: relative;/*これないとleftが効かない*/
         left: -3%;/*.kaiten適用時　nav帯の位置調整で必須*/
     }
 
