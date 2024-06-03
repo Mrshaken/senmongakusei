@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>6-2-3 複合検索でカテゴリ別に画像を並び替える</title>
-<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
 
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-<link rel="stylesheet" type="text/css" href="css/gallery.css">
-<link rel="stylesheet" type="text/css" href="css/mobile.css">
-<link rel="stylesheet" type="text/css" href="css/nav.css">
+<head>
+    <meta charset="utf-8">
+    <title>6-2-3 複合検索でカテゴリ別に画像を並び替える</title>
+    <meta name="description" content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+    <link rel="stylesheet" type="text/css"
+        href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
 </head>
 
 <body>
 
-  <div class="wrapper">
-    <!--ヘッダー（ロゴ）　ハンバーガーボタン-->
-    <header id="header">
-        <h1 class="hlogo"><span class="logo"><span class="hd">専門学生の日常</span></span></h1>
+    <div class="wrapper">
+        <!--ヘッダー（ロゴ）　ハンバーガーボタン-->
+        <header id="header">
+            <h1 class="hlogo"><span class="logo"><span class="hd">専門学生の日常</span></span></h1>
 
 
-        <div class="openbtn1"><span></span><span></span><span></span></div>
-        <nav id="g-nav">
-            <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-                <ul>
-                    <li class="headerNavLists__item"><a class="navLink" href="index.html"><span class="navTxt">Top</span></a></li>
-                    <li class="headerNavLists__item"><a class="navLink" href="intro.html"><span class="navTxt">Introduction</span></a></li>
-                    <li class="headerNavLists__item"><a class="navLink" href="story.html"><span class="navTxt">Story</span></a></li>
-                    <li class="headerNavLists__item"><a class="navLink" href="chara.html"><span class="navTxt">Character</span></a></li>
-                    <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
-                            href="https://senmongakkou.blog"><span class="navTxt">Blog</span></a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+            <div class="openbtn1"><span></span><span></span><span></span></div>
+            <nav id="g-nav">
+                <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                    <ul>
+                        <li class="headerNavLists__item"><a class="navLink" href="index.html"><span
+                                    class="navTxt">Top</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="intro.html"><span
+                                    class="navTxt">Introduction</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="story.html"><span
+                                    class="navTxt">Story</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="chara.html"><span
+                                    class="navTxt">Character</span></a></li>
+                        <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
+                                href="https://senmongakkou.blog"><span class="navTxt">Blog</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <nav class="pc-nav  bg-green">
             <div class="logo-nav-bg">
-                <div class="logo-nav"></div>
-            <div class="pc-nav-div"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+            <div class="logo-nav"></div>
+          </div>
+            <div class="pc-nav-div sticky"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
                 <ul class="kaiten">
                     <li class="headerNavLists__item"><a class="navLink" href="index.html"><span class="navTxt">Top</span></a></li>
                     <li class="headerNavLists__item"><a class="navLink" href="intro.html"><span class="navTxt">Introduction</span></a></li>
@@ -50,230 +57,328 @@
                 </ul>
             </div>
         </nav>
-    </header>
-    <section class="two-column">
-      <nav class="pc-nav"><!--PC版用のナビゲーション-->
-          <div class="pc-nav-div"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
-              <ul>
-                  <li class="headerNavLists__item"><a class="navLink" href="#"><span class="#">Top</span></a></li>
-                  <li class="headerNavLists__item"><a class="navLink" href="#">About</a></li>
-                  <li class="headerNavLists__item"><a class="navLink" href="#">Introduction</a></li>
-                  <li class="headerNavLists__item"><a class="navLink" href="story.html">Story</a></li>
-                  <li class="headerNavLists__item"><a class="navLink" href="chara.html">Character</a></li>
-                  <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
-                          href="https://senmongakkou.blog">Blog</a></li>
-              </ul>
-          </div>
-      </nav>
-      <div class="pc-main"><!--PC版用のメイン-->        
-<div class="kanban"><img src="../img/common/gallery.webp"></div>
+        </header>
+        <section class="two-column">
+            <nav class="pc-nav"><!--PC版用のナビゲーション-->
+                <div class="pc-nav-div"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                    <ul>
+                        <li class="headerNavLists__item"><a class="navLink" href="#"><span class="#">Top</span></a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#">About</a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="#">Introduction</a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="story.html">Story</a></li>
+                        <li class="headerNavLists__item"><a class="navLink" href="chara.html">Character</a></li>
+                        <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
+                                href="https://senmongakkou.blog">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="pc-main"><!--PC版用のメイン-->
+                <div class="kanban"><img src="../img/common/gallery.webp"></div>
 
 
-  <h1>Gallery</h1>
-  <p>画像一覧の列調整と並び替えで使用したライブラリ：<a href="https://haltu.github.io/muuri/" target="_blank">https://haltu.github.io/muuri/</a></p>  
-  <p>画像拡大に使用したライブラリ：<a href="http://fancyapps.com/fancybox/3/" target="_blank">http://fancyapps.com/fancybox/3/</a><br>※商用利用の場合fancyboxは有料になります。公式サイトを参照してください。</p>
+                <h1>Gallery</h1>
+                <p>画像一覧の列調整と並び替えで使用したライブラリ：<a href="https://haltu.github.io/muuri/"
+                        target="_blank">https://haltu.github.io/muuri/</a></p>
+                <p>画像拡大に使用したライブラリ：<a href="http://fancyapps.com/fancybox/3/"
+                        target="_blank">http://fancyapps.com/fancybox/3/</a><br>※商用利用の場合fancyboxは有料になります。公式サイトを参照してください。
+                </p>
 
-<ul class="sort-btn"> 
-<li>
-    <dl>
-    <dt>All</dt>
-    <dd>
-        <ul>
-        <li class="all active">全て</li>
-        </ul>
-    </dd>
-    </dl>
-</li>
-<li>
-    <dl>
-    <dt>Color</dt>
-    <dd>
-        <ul>
-        <li class="color01">Color1</li>
-        <li class="color02">Color2</li>
-        <li class="color03">Color3</li>       
-        </ul>
-    </dd>
-    </dl>
-</li>
-<li>
-    <dl>
-    <dt>Category</dt>
-    <dd>
-        <ul>
-        <li class="cat01">カテゴリ1</li>
-        <li class="cat02">カテゴリ2</li>
-        <li class="cat03">カテゴリ3</li>        
-        </ul>
-    </dd>
-    </dl>
-</li>
-<!--/sort-btn--></ul> 
-  
-  <ul class="grid">
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/01.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/01.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 cat02 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/02.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/02.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/03.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/03.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/04.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/04.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/05.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/05.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/06.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/06.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/07.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/07.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/08.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/08.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/09.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/09.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/10.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/10.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/11.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/11.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/12.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/12.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/13.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/13.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/14.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/14.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/15.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/15.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/16.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/16.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/17.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/17.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/18.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/18.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/19.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/19.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/20.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/20.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/21.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/21.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/22.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/22.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/23.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/23.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/24.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/24.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/25.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/25.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/26.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/26.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/27.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/27.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat01 color01">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/28.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/28.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat02 color02">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/29.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/29.jpg" alt=""></a>
-    </div>
-    </li>
-    <li class="item cat03 color03">
-    <div class="item-content">
-    <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/30.jpg" data-fancybox="group" data-caption="キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/30.jpg" alt=""></a>
-    </div>
-    </li>
-  </ul>
+                <ul class="sort-btn">
+                    <li>
+                        <dl>
+                            <dt>All</dt>
+                            <dd>
+                                <ul>
+                                    <li class="all active">全て</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>Color</dt>
+                            <dd>
+                                <ul>
+                                    <li class="color01">Color1</li>
+                                    <li class="color02">Color2</li>
+                                    <li class="color03">Color3</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>Category</dt>
+                            <dd>
+                                <ul>
+                                    <li class="cat01">カテゴリ1</li>
+                                    <li class="cat02">カテゴリ2</li>
+                                    <li class="cat03">カテゴリ3</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <!--/sort-btn-->
+                </ul>
 
-</div>
-</section>
-  <!--/wrapper--></div>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
-<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
-<script src="js/gallery.js"></script></body>
+                <ul class="grid">
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/01.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/01.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 cat02 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/02.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/02.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/03.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/03.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/04.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/04.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/05.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/05.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/06.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/06.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/07.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/07.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/08.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/08.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/09.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/09.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/10.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/10.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/11.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/11.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/12.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/12.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/13.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/13.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/14.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/14.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/15.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/15.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/16.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/16.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/17.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/17.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/18.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/18.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/19.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/19.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/20.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/20.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/21.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/21.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/22.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/22.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/23.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/23.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/24.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/24.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/25.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/25.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/26.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/26.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/27.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/27.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat01 color01">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/28.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/28.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat02 color02">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/29.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/29.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                    <li class="item cat03 color03">
+                        <div class="item-content">
+                            <a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/30.jpg"
+                                data-fancybox="group" data-caption="キャプション"><img
+                                    src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-3/img/30.jpg"
+                                    alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+        <!--/wrapper-->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
 
 <!--ハンバーガーメニュー-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!--<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-14/js/5-1-14.js"></script>-->
 <script src="js/humbger.js"></script>
+
 </html>

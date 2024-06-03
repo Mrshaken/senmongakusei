@@ -405,8 +405,9 @@
 
 .two-column {
     display: flex;
-    height: 1200px;
-    height: 1300px;
+    height: auto;
+  /*  height: 1200px;
+    height: 1300px;*/
     /*PC版navとkeyvisualの高さを設定する*/
 }
 
@@ -427,7 +428,7 @@
     position:absolute;
     top:0;
     border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+   /* border-bottom-right-radius: 40px;*/
     background-color: #568C6D;
   
     opacity: 0.8;
@@ -474,12 +475,12 @@
 
     .pc-nav {
        width: 30%;
-        padding-top: 25%;
+        padding-top: 10%;
         position: relative;/*これないとleftが効かない*/
         left: -3%;/*.kaiten適用時　nav帯の位置調整で必須*/
-        animation: fadeInNav 1.5s ease 0.5s 1 normal backwards;
-        top:-15%;/*わざとアニメーションを演出するため*/
-        height: 120%;/*top-15%を調整する 100% + |-15%|*/
+        animation: fadeInNav 1.25s ease 0.5s 1 normal backwards;
+       /* top:-15%;/*わざとアニメーションを演出するため*/
+      /*  height: 120%;/*top-15%を調整する 100% + |-15%|*/
     }
 
     @keyframes fadeInNav {
@@ -489,7 +490,7 @@
         }
         to {
           opacity: 1;
-          padding-top: 25%;
+          padding-top: 10%;
       
         }
       }
@@ -515,6 +516,13 @@
         letter-spacing: 0.1em;
         font-weight: bold;
     }
+
+    .pc-nav .sticky {/*スクロールでメニューが追従*/
+        position: -webkit-sticky; /* 任意 */
+        position: sticky;
+        
+        top: 13%;
+      }
 
 }
 
