@@ -121,9 +121,9 @@
  * headerNav
  */
 .headerNavLists__item {
-    width: 37vw;/*280px;   /*nav帯の長さはここで調整*/
+    width: /*37vw;*/280px;   /*nav帯の長さはここで調整*/
 
-    display: inline-block;
+    display: flex;
     padding-right: 9.334%;
     position: relative;
     margin-bottom: 5.6667%;
@@ -132,7 +132,7 @@
 }
 
 .navLink {
-    display: inline-block;
+    display: flex;
     width: 100%;
     position: relative;
     border-top-right-radius: 50px;
@@ -317,6 +317,53 @@
 /**/
 /*=============================================================================*/
 
+/*=============================================================================*/
+/*ロゴ*/
+/*=============================================================================*/
+ /* Logo */
+ .logo-nav-bg{
+    width: 390px;
+    height: 140px;
+    border: 3px solid #926453;
+    border-left-width: 0px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding: 5px 10px 5px 20px;
+    position: relative;
+    background-color: #fff;
+  /*  background-image: repeating-linear-gradient(-45deg,#fff899, #fff899 16px,transparent 0, transparent 28px);*/
+    margin-bottom: 40%;
+}
+
+.logo-nav-bg:before{
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -3px;
+    bottom: -3px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 2px 2px #926453;
+}
+
+.logo-nav{
+    display: flex;
+    width: 370px;   /*ちょい小さめ*/
+    height:120px;
+   /* padding-top: 86px;*/
+    background: url(../img/common/logo.png) no-repeat center / 80%;
+    /*contain*/
+    /* 単一の画像、中央寄せかつ縮小 */
+    margin-bottom:40%;
+
+  
+}
+
+
+/*=============================================================================*/
+/*ナビゲーション部分*/
+/*=============================================================================*/
 /*PCの場合*/
 .pc-nav {
     display: none;
@@ -325,6 +372,8 @@
  
   /*  transform: translateX(-20px);*/
 }
+
+
 
 /*PC-nav要素ごとに回転を加える*/    
  .kaiten li{
@@ -361,16 +410,13 @@
     /*PC版navとkeyvisualの高さを設定する*/
 }
 
-.bg-green{
 
-    height: inherit;
-    position: relative;
-  
- 
-}
 
 /*TITLE:nav背景アニメーション*/
-
+.bg-green{
+    height: inherit;
+    position: relative;
+}
 /*背景だけ乗算効果を与える*/
 /*https://note.com/mitsuru_h_cc/n/n379e3ffabf94*/
 .bg-green:before{
@@ -383,14 +429,14 @@
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     background-color: #568C6D;
-    mix-blend-mode:multiply;
+  
     opacity: 0.8;
+    padding: 10px;
+    animation: fadeInBg 1.8s ease 0.8s 1 normal backwards;
+    mix-blend-mode:multiply;
   }
 
-  .bg-green:before {
-    padding: 10px;
-    animation: fadeInBg 0.8s ease 0.5s 1 normal backwards;
-  }
+
    
   @keyframes fadeIn {
     from {
@@ -410,7 +456,7 @@
     from {
       opacity: 0;
     
-      transform: translateX(-20px);
+      transform: translateX(-130px);
     }
     to {
       opacity: 1;
@@ -428,10 +474,25 @@
 
     .pc-nav {
        width: 30%;
-        padding-top: 15%;
+        padding-top: 25%;
         position: relative;/*これないとleftが効かない*/
         left: -3%;/*.kaiten適用時　nav帯の位置調整で必須*/
+        animation: fadeInNav 1.5s ease 0.5s 1 normal backwards;
+        top:-15%;/*わざとアニメーションを演出するため*/
+        height: 120%;/*top-15%を調整する 100% + |-15%|*/
     }
+
+    @keyframes fadeInNav {
+        from {
+          opacity: 0;
+          padding-top: 0%;
+        }
+        to {
+          opacity: 1;
+          padding-top: 25%;
+      
+        }
+      }
 
     .key-visual{
         display: flex;

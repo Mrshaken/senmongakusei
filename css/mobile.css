@@ -186,6 +186,13 @@ body {
   position: relative;
   height: 18vh;
 }
+@media screen and (min-width:479px) {
+  #header{
+    display:none;
+
+  }
+}
+
 
 
 
@@ -1193,6 +1200,7 @@ color:red;
   position: relative;
   height: auto;
   padding: 32px 0 48px;
+  z-index: 3;
 }
 
 @media screen and (max-width: 767px) {
@@ -1286,6 +1294,7 @@ color:red;
     position: relative;
     width: 60%;
     margin-left:5%;
+    height: 100%;
 }
 }
 
