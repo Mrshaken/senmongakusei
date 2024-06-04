@@ -121,10 +121,10 @@
  * headerNav
  */
 .headerNavLists__item {
-    width: /*37vw;*/280px;   /*nav帯の長さはここで調整*/
+    /*width: 280px;   /*nav帯の長さはここで調整*//*37vw;*/
 
     display: flex;
-    padding-right: 9.334%;
+    padding-right: 6%;
     position: relative;
     margin-bottom: 5.6667%;
     pointer-events: none;
@@ -474,7 +474,7 @@
     }
 
     .pc-nav {
-       width: 30%;
+       width: min(30%,400px);/*400pxより大きくならない?*/
         padding-top: 10%;
         position: relative;/*これないとleftが効かない*/
         left: -3%;/*.kaiten適用時　nav帯の位置調整で必須*/
@@ -529,7 +529,7 @@
 .navTxt{
     position: relative;
     z-index: 2;
-    padding-left: 18%;/*.kaiten適用時　nav帯と文字位置調整のため必要*/
+    padding-left: 80px;/*.kaiten適用時　nav帯と文字位置調整のため必要*/
 }
 .navTxt span{
     font-size: 14px;
