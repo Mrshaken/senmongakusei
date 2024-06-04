@@ -1,7 +1,7 @@
 $(window).on('load',function(){ //画面遷移時にギャラリーの画像が被らないように、すべての読み込みが終わった後に実行する
 
     //＝＝＝Muuriギャラリープラグイン設定
-    var grid = new Muuri('.grid', {
+    var grid = new Muuri('.grid-masonry', {
     
     //アイテムの表示速度※オプション。入れなくても動作します
     showDuration: 600,

@@ -157,3 +157,16 @@ p{
 .item-content img{
   width:300px;
 }
+
+.grid-masonry {
+  position: relative;/*並び替えの基準点を指定*/
+  display: grid;
+  grid-gap: 1em;
+  grid: masonry / repeat(auto-fit, minmax(20em, 1fr));
+}
+
+.grid-masonry img{
+  width:100%;
+  height:auto;
+  vertical-align: bottom;/*画像の下にできる余白を削除*/
+}

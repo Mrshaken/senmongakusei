@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>6-2-3 複合検索でカテゴリ別に画像を並び替える</title>
-    <meta name="description" content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+    <title>GALLERY|専門学生の日常</title>
+    <meta name="description" content="専門学生の日常のギャラリーページです">
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
@@ -36,6 +36,8 @@
                                     class="navTxt">Story</span></a></li>
                         <li class="headerNavLists__item"><a class="navLink" href="chara.html"><span
                                     class="navTxt">Character</span></a></li>
+                                    <li class="headerNavLists__item"><a class="navLink" href="gallery.html"><span
+                                        class="navTxt">Gallery</span></a></li>
                         <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
                                 href="https://senmongakkou.blog"><span class="navTxt">Blog</span></a></li>
                     </ul>
@@ -57,6 +59,8 @@
                                     class="navTxt">Story</span></a></li>
                         <li class="headerNavLists__item"><a class="navLink" href="chara.html"><span
                                     class="navTxt">Character</span></a></li>
+                                    <li class="headerNavLists__item"><a class="navLink" href="gallery.html"><span
+                                        class="navTxt">Gallery</span></a></li>
                         <li class="headerNavLists__item"><a target="_blank" rel="noopener noreferrer" class="navLink"
                                 href="https://senmongakkou.blog"><span class="navTxt">Blog</span></a></li>
                     </ul>
@@ -66,12 +70,8 @@
                 <div class="kanban"><img src="../img/common/gallery.webp"></div>
 
 
-                <h1>Gallery</h1>
-                <p>画像一覧の列調整と並び替えで使用したライブラリ：<a href="https://haltu.github.io/muuri/"
-                        target="_blank">https://haltu.github.io/muuri/</a></p>
-                <p>画像拡大に使用したライブラリ：<a href="http://fancyapps.com/fancybox/3/"
-                        target="_blank">http://fancyapps.com/fancybox/3/</a><br>※商用利用の場合fancyboxは有料になります。公式サイトを参照してください。
-                </p>
+             <!--   <h1>Gallery</h1>-->
+
 
                 <ul class="sort-btn">
                     <li>
@@ -112,13 +112,15 @@
                     <!--/sort-btn-->
                 </ul>
 
-                <ul class="grid">
+                <ul class=" grid-masonry">
                     <li class="item cat01 chara01">
                         <div class="item-content">
                             <a href="img/story/sample1.jpg" data-fancybox="group" data-caption="サンプル01"><img
                                     src="img/story/sample1.jpg" alt=""></a>
                         </div>
                     </li>
+                    <li class="item   chara03    "><div class="item-content"><a href="img/character/nanase.png"  data-fancybox="group" data-caption=""><img src="img/character/nanase.png"alt=""></a></div></li>
+
                     <li class="item chara01 chara02 chara03 chara04 cat01  ">
                         <div class="item-content"><a href="img/story/sample1.jpg" data-fancybox="group"
                                 data-caption="キャプション０１"><img src="img/story/sample1.jpg" alt="画像の説明"></a></div>
@@ -131,8 +133,20 @@
                         <div class="item-content"><a href="img/story/sample3.jpg" data-fancybox="group"
                                 data-caption=""><img src="img/story/sample3.jpg" alt=""></a></div>
                     </li>
-            </div>
-        </section>
+                    <li class="item chara01      "><div class="item-content"><a href="img/character/mashiro.png"  data-fancybox="group" data-caption=""><img src="img/character/mashiro.png"alt=""></a></div></li>
+                    <li class="item  chara03 chara04  cat02 ">
+                        <div class="item-content"><a href="img/story/sample3.jpg" data-fancybox="group"
+                                data-caption=""><img src="img/story/sample3.jpg" alt=""></a></div>
+                    </li>
+                    <li class="item   chara03    "><div class="item-content"><a href="img/character/nanase.png"  data-fancybox="group" data-caption=""><img src="img/character/nanase.png"alt=""></a></div></li>
+                    <li class="item    chara04   "><div class="item-content"><a href="img/character/momoe.png"  data-fancybox="group" data-caption=""><img src="img/character/momoe.png"alt=""></a></div></li>  
+                                    <li class="item  chara03 chara04  cat02 ">
+                        <div class="item-content"><a href="img/story/sample3.jpg" data-fancybox="group"
+                                data-caption=""><img src="img/story/sample3.jpg" alt=""></a></div>
+                    </li>
+                </ul>
+
+                </section>
         <!--/wrapper-->
     </div>
     <footer id="footer">
