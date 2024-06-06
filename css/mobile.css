@@ -254,7 +254,7 @@ margin-top:50px;
   right:100px;
   margin:calc(50% - 50vw);
   margin-left:10vw;
-  margin-top:70px;
+  /*margin-top:70px;*/
   }
 
   .logo {
@@ -684,7 +684,7 @@ img {
 }
 
 .picture {
-  height: inherit;
+  /*height: inherit;*/
   /*★★連動箇所*/
   bottom: 40px;
   flex-shrink: 0;
@@ -694,6 +694,9 @@ img {
   z-index: -11;
   filter: drop-shadow(16px -2px 0 rgba(0, 0, 0, 0.2));
 
+}
+.picture img{
+  height:10%;
 }
 
 
@@ -809,9 +812,12 @@ img {
 
 
 .text {
-  position: relative;
-  left: -25%;
-  ;
+  /*position: relative;*/
+  /*left: -25%;*/
+  position: absolute;
+  left:250px;
+  top:700px;
+  
   margin: 0 auto;
 
   line-height: 1.8;
