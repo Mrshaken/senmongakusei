@@ -130,7 +130,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
+ /* font-size: 100%;*/
   font-weight: normal;
 }
 
@@ -280,10 +280,10 @@ margin-top:50px;
   padding:50px 0;
   width: 60%;
 }
-@media screen and (max-width:749px){
+@media screen and (max-width:479px){/*モバイル版*/
   .kanban{
     margin:0px auto;
-    padding:50px 0;
+    padding:20px 0;
     width: 50%;
   }
 }
@@ -1298,7 +1298,7 @@ color:red;
   letter-spacing: -0.05em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .authorLink {
     position: relative;
     margin: 58px auto 0;
@@ -1310,7 +1310,16 @@ color:red;
    
 }
 }
-@media screen and (min-width:767px){
+
+.pc-main{
+  /*モバイル表記の場合*/
+  /* display: flex;*/
+   position: relative;
+   width: 100%;
+ /*  margin:5%;*/
+   height: 100%;
+}
+@media screen and (min-width:479px){
   .pc-main{
    /* display: flex;*/
     position: relative;
@@ -1319,6 +1328,8 @@ color:red;
     height: 100%;
 }
 }
+
+
 
 
 /*=============================================================================*/
