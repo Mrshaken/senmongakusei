@@ -6,6 +6,7 @@
 	margin: 1em auto;
     background-color: #dfd6d6;
     mix-blend-mode: multiply;
+    caret-color:transparent;/*点滅カーソルを透過*/
 }
 .cp_tab > input[type='radio'] {
 	margin: 0;
@@ -34,6 +35,7 @@
 .cp_tab > input:nth-child(21):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(11),
 .cp_tab > input:nth-child(23):checked ~ .cp_tabpanels > .cp_tabpanel:nth-child(12) {
 	display: block;
+    
 }
 .cp_tab > label {
 	position: relative;
