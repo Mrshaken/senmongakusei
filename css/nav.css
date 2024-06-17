@@ -57,30 +57,30 @@
         display: inline-block;
         transition: all .4s;
         position: absolute;
-        left: 14px;
+        left: 8px;
         height: 3px;
         border-radius: 2px;
-        background-color: #666;
-        width: 45%;
+        background-color: #ffffff;
+        width: 60%;
     }
 
     .openbtn1 span:nth-of-type(1) {
-        top: 15px;
+        top: 20px;
     }
 
     .openbtn1 span:nth-of-type(2) {
-        top: 23px;
+        top: 28px;
     }
 
     .openbtn1 span:nth-of-type(3) {
-        top: 31px;
+        top: 36px;
     }
 
     .openbtn1.active span:nth-of-type(1) {
         top: 18px;
-        left: 18px;
+        left: 10px;
         transform: translateY(6px) rotate(-45deg);
-        width: 30%;
+        width: 60%;
     }
 
     .openbtn1.active span:nth-of-type(2) {
@@ -89,10 +89,36 @@
 
     .openbtn1.active span:nth-of-type(3) {
         top: 30px;
-        left: 18px;
+        left: 10px;
         transform: translateY(-6px) rotate(45deg);
-        width: 30%;
+        width: 60%;
     }
+
+    .openbtn1:before{
+        content: '';
+        display: block;
+        background-color: #80a182;
+        width: 350px;
+        height: 370px;
+        border-radius: 50%;
+
+        position: relative;
+        top:-250px;
+        left: -70px;
+        animation: expansion-anim 1.0s linear forwards;
+
+        filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.5));
+    }
+    /* animation */
+@keyframes expansion-anim {
+    0% {
+      transform: scale(0);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
 
 }
 
@@ -467,7 +493,6 @@
   }
 @media screen and (min-width:479px) {
     .pc-nav {
-        /* background-color: #568C6D;*/
         /*適応範囲確認用*/
         display: inline-block;
         height: inherit;
