@@ -4,8 +4,8 @@
 }
 .cp_tab {
 	margin: 1em auto;
-    background-color: #dfd6d6;
-    mix-blend-mode: multiply;
+    background-color: #fffefe;
+    /*mix-blend-mode: multiply;*/
     caret-color:transparent;/*点滅カーソルを透過*/
 }
 .cp_tab > input[type='radio'] {
@@ -84,7 +84,7 @@
 }
 .year_cp_tab {
 	margin: 1em auto;
-    background-color: #dfd6d6;
+    background-color: #d2d2d2;
     mix-blend-mode: multiply;
 }
 .year_cp_tab > input[type='radio'] {
