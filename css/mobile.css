@@ -171,7 +171,7 @@ body {
 
 #main {
   position: relative;
-  margin: 0 auto;
+ /* margin: 0 auto;*/
 
 }
 
@@ -344,7 +344,7 @@ a:active {
 }
 
 .sp_twitterWidget {
-  /*width: 70%;*/
+  width: 70%;
   margin: 7.3334% auto 7%;
   /* padding: ;*/
   border-radius: 20px;
@@ -1107,8 +1107,8 @@ color:red;
 
   width: fit-content;
   position: relative;
-  top: 60px;
-  left: 400px;
+  top: 120px;
+  left: 54%;
   transform-origin: center;
   transform: rotate(25deg);
 
@@ -1143,11 +1143,27 @@ color:red;
 /*=============================================================================*/
 /*figma->トップ*/
 
+.pc-aside {
+  position: relative;
+  width: 100%;
+}
+
+.key-visual {
+  width: 100vw;
+}
+
+.frame {
+ /* width: 479px;*/
+ width:100%;
+/*  height: 800px;*/
+
+}
 
 
 .frame .overlap-group {
   position: relative;
-  width: 748px;
+ /* width: 748px;*/
+ width:100%;
   height: 1322px;
   top: 5px;
   left: 20px;
@@ -1156,56 +1172,68 @@ color:red;
 
 .frame .syakeyama {
   position: absolute;
-  width: 435px;
-  height: 644px;
-  top: 58px;
-  left: 0;
- /* /* object-fit: cover;*/
+  width: 515px;
+ /* height: 644px;*/
+ /* width:70%;
+  height:70%;*/
+  top: -2%;
+  left: 3%;
+  object-fit: contain;
 }
 
 .frame .tobitani {
   position: absolute;
-  width: 465px;
-  height: 662px;
-  top: 534px;
-  left: 24px;
-  /* object-fit: cover;*/
+ width: 658px;
+  /* height: 662px;*/
+ /* width:80%;
+  height:80%;*/
+  top: 465px;
+  left: 8%;
+  object-fit: contain;
 }
 
 .frame .momoe {
   position: absolute;
-  width: 310px;
-  height: 620px;
-  top: 702px;
-  left: 191px;
-  /* object-fit: cover;*/
+ width: 420px;
+   /*height: 620px;*/
+ /* width:70%;
+  height:70%;*/
+  top: -3%;
+  left: 20%;
+ object-fit: contain;
 }
 
 .frame .mashiro {
   position: absolute;
-  width: 353px;
-  height: 823px;
-  top: 0;
-  left: 85px;
-  /* object-fit: cover;*/
+  width: 440px;
+/*  height: 823px; */
+ /* width:80%;
+  height:80%;*/
+  top: 1%;
+  left: 28%;
+  object-fit: contain;
 }
 
 .frame .nanase {
   position: absolute;
-  width: 414px;
-  height: 777px;
-  top: 126px;
-  left: 334px;
-  /* object-fit: cover;*/
+ width: 512px;
+   /*height: 777px;*/
+ /* width:80%;
+  height:80%;*/
+  top: 4%;
+  left: 49%;
+  object-fit: contain;
 }
 
 .frame .shimoduki {
   position: absolute;
-  width: 449px;
-  height: 582px;
-  top: 364px;
-  left: 276px;
-  /* object-fit: cover;*/
+  width: 583px;
+ /* height: 582px;*/
+  /*width:80%;
+  height:80%;*/
+  top: 29%;
+  left: 35%;
+  object-fit: contain;
 }
 
 @media screen and (max-width:479px) {
@@ -1242,12 +1270,6 @@ color:red;
   /*キャラ全体の位置調整*/
     top: 100px;
     left: 20px;
-  }
-
-  .frame {
-    width: 479px;
-    height: 800px;
-
   }
 
   /*キャラクター各種*/
