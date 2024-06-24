@@ -792,14 +792,13 @@ img {
 
 
 .chara_head_name {
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: "Zen Maru Gothic", serif;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 40px;
+  margin-bottom:10px;
 
   /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-  font-size: clamp(28px, calc(1.25vw + 36px), 48px);
-
+  font-size: clamp(68px, calc(1.25vw + 56px), 78px);
   line-height: 1.4091;
   font-weight: 800;
   color: #965d5d;
@@ -808,7 +807,7 @@ img {
 .chara_head_name_kana {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 500;
   /*200-800*/
   letter-spacing: 0.1em;
   font-stretch: semi-condensed;
@@ -1449,10 +1448,11 @@ color:red;
   position: relative;
   width: 100%;
   /*  margin:5%;*/
+  margin-right:4%;
   height: 100%;
 }
 
-@media screen and (min-width:479px) {
+@media screen and (max-width:479px) {
   .pc-main {
     /* display: flex;*/
     position: relative;

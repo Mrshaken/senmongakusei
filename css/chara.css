@@ -82,21 +82,26 @@
   position: relative;
   display: flex;
 width:100%;
-height:800px;
+/*height:800px;*/
 background-color: brown;
+margin-top: 40px;
 }
 
 .chara_pic {
   position: relative;
 width:60%;
-height:800px;
+/*height:800px;*/
 background-color: rgb(157, 88, 88);
+}
+.chara_pic img{
+  position: relative;
+  top:-100px;
 }
 
 .chara_txt {
   position: relative;
 width:60%;
-height:800px;
+/*height:800px;*/
 background-color: rgb(157, 88, 88);
 }
 
@@ -107,20 +112,21 @@ background-color: rgb(157, 88, 88);
 .chara_head {
   position: relative;
   display: flex;
-width:60%;
-height:200px;
+  flex-direction: column;
+/*width:60%;*/
+/*height:200px;*/
   background-color: blueviolet;
+  margin-top: 8%;;
 }
 
-.chara_head_name {
 
-}
 
 .c_mashiro {
 
 }
 
 .chara_head_name_kana {
+  width:80%;
   background-color: aqua;
   color: black;
 }
