@@ -798,10 +798,10 @@ img {
   margin-bottom:10px;
 
   /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-  font-size: clamp(68px, calc(1.25vw + 56px), 78px);
+  font-size: clamp(46px, calc(1.25vw + 48px), 78px);
   line-height: 1.4091;
   font-weight: 800;
-  color: #965d5d;
+  color: #ffffff;
 }
 
 .chara_head_name_kana {
@@ -811,8 +811,8 @@ img {
   /*200-800*/
   letter-spacing: 0.1em;
   font-stretch: semi-condensed;
-  font-style: normal;
-  color: pink;
+  font-style: italic;
+  color: rgb(255, 227, 233);
 
   font-size: clamp(24px, calc(1.25vw + 18px), 36px);
   top: -10px;
@@ -938,7 +938,7 @@ img {
     font-size: 36px;
     line-height: 1.4091;
     font-weight: 800;
-    color: #965d5d;
+    color: #ffffff;
 
   }
 
@@ -949,8 +949,7 @@ img {
     /*200-800*/
     letter-spacing: 0.1em;
     font-stretch: semi-condensed;
-    font-style: normal;
-
+    font-style: italic;
 
     font-size: 24px;
     left: 10px !important;
@@ -1022,7 +1021,7 @@ img {
     font-size: 10px;
     line-height: 1.4091;
     font-weight: 800;
-    color: #965d5d;
+    color: #ffffff;
   }
 
   .chara_head_name_kana {
