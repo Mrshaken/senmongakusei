@@ -213,3 +213,27 @@ color:aliceblue;
   border-bottom: 4px dotted #ffffff;
   margin:5px 10% 0 0 ;
 }
+
+@media screen and (max-width:479px){
+  .chara_box{
+    display:block;
+    /*flex-direction: block;*/
+ 
+  }
+  .chara_box:before{
+    line-height: 1.5em;
+  }
+
+  .chara_pic{
+    width: 100%;;
+    top:100px;
+  }
+  .chara_txt{
+    width:100%;
+    top:-100px;
+    padding:0 5%;
+  }
+  .chara_desc_txt{
+    font-size:18px;
+  }
+}
