@@ -1450,6 +1450,27 @@ color:red;
   margin-right:4%;
   height: 100%;
 }
+/*characterページのみ使用するPCで小さい場合は固定幅にする部分*/
+@media screen and (min-width:480px) and (max-width:1240px) {
+  .pc-main {
+    width: 800px;
+    margin-left: 100px;
+
+  }
+  .chara_list{
+    width: 500px;
+
+  }
+  .chara_box{
+    width:780px;
+  }
+  .chara_txt{
+    width:400px;
+  }
+  .chara_pic{
+    width:380px;
+  }
+}
 
 @media screen and (max-width:479px) {
   .pc-main {
