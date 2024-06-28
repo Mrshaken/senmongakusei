@@ -55,10 +55,12 @@
 	border-bottom: 1px solid #ffffff;/*背景色と同じ*/
 	border-radius: 6px 6px 0 0;
 }
-.cp_tab .cp_tabpanel {
-	padding: 0.5em 1em;
-	border-top: 1px solid #cccccc;
+.cp_tab .cp_tabpanel h2 {
+	margin:1.5em 0 1.5em 1em;
+	/*padding: 0.5em 1em;*/
 }
+
+.cp_tab .cp_tabpanel
 @media (max-width: 480px) {
 	.cp_tab {
 		width: 100%;
