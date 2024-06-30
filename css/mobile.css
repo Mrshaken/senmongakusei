@@ -287,6 +287,7 @@ body {
   margin: 0px auto;
   padding: 50px 0;
   width: 60%;
+  text-align: center;
 }
 
 @media screen and (max-width:479px) {
