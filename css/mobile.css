@@ -285,7 +285,7 @@ body {
 
 .kanban {
   margin: 0px auto;
-  padding: 50px 0;
+  padding: 80px 0 30px;
   width: 60%;
   text-align: center;
 }
@@ -1459,6 +1459,7 @@ color:red;
     width: 60%;
     margin-left: 5%;
     height: 100%;
+    margin:0 auto;
   }
 }
 

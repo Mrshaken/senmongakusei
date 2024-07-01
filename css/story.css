@@ -145,7 +145,7 @@ body {
   /*画像の横幅を100%にしてレスポンシブ化*/
 .slick-img {
   width: 100%;
-  height: 400px;
+  height: 250px;
   vertical-align: bottom;
   /*画像の下にできる余白を削除*/
   border-radius: 20px;
@@ -571,6 +571,18 @@ h2.articleHead {
   position: relative;
 }
 
+h3 {
+  font-family: 'Bruno Ace SC', sans-serif;
+  border: none;
+  color: #915656;
+  font-size: 4rem;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  margin: 1.0em 0em 0.1em;
+  margin-left: 1em;
+}
+
 
 /*参考URL:https://shiroi-ponzu.com/webparts/waai-slash/*/
 div.slash {
@@ -590,7 +602,7 @@ div.slash {
 }
 
 
-h2 .day_head {
+h3 .day_head {
   font-family: 'Bruno Ace SC', sans-serif;
   border: none;
   color: #915656;
@@ -606,7 +618,8 @@ h2 .day_head {
   position: relative;
 }
 
-.gallery-text h3 {
+
+.gallery-text h4 {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 800;
   border: none;
@@ -701,7 +714,7 @@ a.btn--color:hover {
 
 
 
-h3.articleHead {
+h4.articleHead {
   background: none;
   border: none;
   text-align: left;
@@ -725,4 +738,23 @@ width: 100%;
   position: relative;
   top:-40px;/*2023,2024の文字のせいで看板との位置調整はここで行う*/
 }
+
+.gallery-text h4 {
+
+
+  /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
+  font-size: clamp(2.0rem, calc(1.25vw + 1.25rem), 3rem);
+  margin: 0 20px 20px 20px;
+}
+
+.gallery-text .honbun {
+
+    font-size: clamp(1.0rem, calc(1.25vw + 0.75rem), 2.0rem);
+  line-height: 1.5;
+ /* display: flex;*/
+  align-items: flex-start;
+  margin: 10px 20px 0.3em 20px;
+}
+
+
 }
