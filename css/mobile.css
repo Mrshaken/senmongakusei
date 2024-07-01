@@ -295,8 +295,8 @@ body {
   /*モバイル版*/
   .kanban {
     margin: 0px auto;
-    padding: 20px 0;
-    width: 50%;
+    padding: 50px 0 20px;
+    width: 100%;
   }
 }
 
@@ -687,13 +687,13 @@ img {
 
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 479px) {
   .chara_item .transByImg {
     transform: translateY(200px);
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 479px) {
 
   /*使うかわからないけど*/
   .chara_item .transByImg {
@@ -970,7 +970,7 @@ img {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 479px) {
   /*使うかわからないけど*/
 
   .text {
@@ -1004,42 +1004,6 @@ img {
   }
 
 
-  .chara_head {
-    /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-    /*font-size: 24px;/*clamp(1.8rem, calc(1.25vw + 1.5rem), 3.2rem);*/
-    line-height: 1.4091;
-    font-weight: 800;
-    margin-bottom: 0px;
-  }
-
-  .chara_head_name {
-    font-family: "Zen Maru Gothic", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 10px;
-
-    /* 最小1.8rem | SP:2rem | TB:2.5rem | PC:3rem | 最大3.2rem */
-    font-size: 10px;
-    line-height: 1.4091;
-    font-weight: 800;
-    color: #ffffff;
-  }
-
-  .chara_head_name_kana {
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    /*200-800*/
-    letter-spacing: 0.1em;
-    font-stretch: semi-condensed;
-    font-style: normal;
-
-
-    font-size: 9px !important;
-    top: -10px;
-    left: 10px !important;
-    position: relative;
-  }
 
   .text p {
     /*キャラ紹介の本文部分*/
@@ -1077,22 +1041,11 @@ img {
 }
 
 
-
-/*
-.chara_head_name{
-color:blue;
+@media screen and (max-width: 479px) {
+  .pc_main{
+    width: 100%;
+  }
 }
-.chara_head_name_kana
-{
-color:pink;
-font-size: 12px;;
-}
-.chara_head_lines
-{
-color:red;
-}
-*/
-
 
 
 
@@ -1451,16 +1404,44 @@ color:red;
   margin-right:4%;
   height: 100%;
 }
+/*characterページのみ使用するPCで小さい場合は固定幅にする部分*/
+@media screen and (min-width:480px) and (max-width:1240px) {
+  .pc-main {
+    width: 800px;
+    margin-left: 100px;
+
+  }
+  .chara_list{
+    width: 500px;
+
+  }
+  .chara_box{
+    width:780px;
+  }
+  .chara_txt{
+    width:400px;
+  }
+  .chara_pic{
+    width:380px;
+  }
+}
 
 @media screen and (max-width:479px) {
   .pc-main {
     /* display: flex;*/
     position: relative;
-    width: 60%;
+    width: 100%;
     margin-left: 5%;
     height: 100%;
     margin:0 auto;
   }
+
+  .main-chara-sp{
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+
+
 }
 
 
